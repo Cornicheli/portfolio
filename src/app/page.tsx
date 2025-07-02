@@ -87,7 +87,7 @@ export default function Home() {
             <a
               href="/GabrielCornideCV.pdf"
               download
-              className="bg-[#F2F2F2] rounded opacity-80 text-black py-2 text-1xl w-32 flex items-center justify-center"
+              className="bg-[#F2F2F2] rounded opacity-80 text-black py-2 text-1xl w-32 flex items-center justify-center cursor-pointer"
             >
               Descarga CV
             </a>
