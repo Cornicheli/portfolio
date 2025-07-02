@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Header from "@/components/Header";
 import CircleContact from "@/components/CircleContact";
@@ -16,7 +17,6 @@ import linkedinW from "@./public/icons/linkedinW.png";
 import { experiences } from "@/experiences";
 import { techCategories } from "@/techCategories";
 import { projectImages } from "@/projectImages";
-import { useEffect, useState } from "react";
 
 export default function Home() {
   const [widthDimension, setWidthDimension] = useState(
@@ -44,7 +44,7 @@ export default function Home() {
       <Header />
       <section
         id="sobre-mi"
-        className="flex-col px-6 flex lg:flex-col xl:p-0 bg-[#181818]"
+        className="flex-col px-6 flex lg:flex-col xl:p-0 bg-[#181818] my-1"
       >
         <div className="flex min-h-screen flex-col  bg-[#181818] justify-around items-center xl:flex-row">
           <div className="flex flex-col justify-center items-start gap-4 w-full lg:w-2xl">
@@ -84,7 +84,7 @@ export default function Home() {
               />
             </div>
 
-            <button className="bg-[#F2F2F2] rounded opacity-80 text-black  py-2 text-1xl  w-32">
+            <button className="bg-[#F2F2F2] rounded opacity-80 text-black py-2 text-1xl  w-32">
               Descarga CV
             </button>
           </div>
