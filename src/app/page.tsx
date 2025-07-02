@@ -46,8 +46,8 @@ export default function Home() {
         id="sobre-mi"
         className="flex-col px-6 flex lg:flex-col xl:p-0 bg-[#181818] my-1"
       >
-        <div className="flex min-h-screen flex-col  bg-[#181818] justify-around items-center xl:flex-row">
-          <div className="flex flex-col justify-center items-start gap-4 w-full lg:w-2xl">
+        <div className="flex min-h-screen flex-col bg-[#181818] justify-around items-center xl:flex-row">
+          <div className="flex flex-col justify-center my-1.5 items-start gap-4 w-full lg:w-2xl">
             <Title>Gabriel Cornide</Title>
             <Paragraph>
               Desarrollador Frontend Web & Mobile con +3 años de experiencia en
@@ -87,7 +87,7 @@ export default function Home() {
             <a
               href="/GabrielCornideCV.pdf"
               download
-              className="bg-[#F2F2F2] rounded opacity-80 text-black py-2 text-1xl w-32 flex items-center justify-center cursor-pointer"
+              className="bg-[#F2F2F2] rounded opacity-80 text-black py-2 text-1xl w-32 flex items-center justify-center cursor-pointer my-1.5"
             >
               Descarga CV
             </a>
