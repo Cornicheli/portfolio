@@ -14,10 +14,10 @@ export const experiences = [
     company: "HomeDeluxe",
     id: "homedeluxe",
     role: "Frontend",
-    location: "Remoto",
+    location: "(Remoto)",
     date: "Ene – Jun 2024",
     tasks: [
-      "Diseñé prototipos UI y desarrollé una web corporativa responsive",
+      "Diseñé prototipos UI y desarrollé una web corporativa responsive.",
       "Optimizaciones claves para mejorar la performance y tiempos de carga.",
       "Implementé estilos mobile-first.",
     ],
@@ -26,7 +26,7 @@ export const experiences = [
     company: "Administración Rolon",
     id: "adminrolon",
     role: "Frontend",
-    location: "Remoto",
+    location: "(Remoto)",
     date: "Ene – Abr 2024",
     tasks: [
       "Diseñé prototipos UI y desarrollé una web corporativa.",

@@ -22,7 +22,9 @@ export default function TechIconsSection({
                     height={48}
                     className="object-contain"
                   />
-                  <p className="text-white text-xs mt-2">{icon.alt}</p>
+                  <p className="text-white text-xs text-center mt-2">
+                    {icon.alt}
+                  </p>
                 </div>
               ))}
             </div>
