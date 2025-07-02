@@ -13,7 +13,7 @@ export default function TechIconsSection({
               {cat.icons.map((icon, i) => (
                 <div
                   key={i}
-                  className="flex flex-col justify-between items-center p-3 rounded-xl bg-neutral-800 hover:scale-105 transition-transform duration-300 w-18 h-22 xl:h-auto xl:w-26"
+                  className="flex flex-col justify-between items-center p-1 xl:p-3 rounded-xl bg-neutral-800 hover:scale-105 transition-transform duration-300 w-18 h-22 xl:h-auto xl:w-26"
                 >
                   <Image
                     src={icon.src}
