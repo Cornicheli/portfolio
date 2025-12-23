@@ -1,5 +1,16 @@
 export const experiences = [
   {
+    company: "Gire",
+    id: "Gire",
+    role: "Frontend IA",
+    location: "CABA (Híbrido)",
+    date: "Agos 2025 – Dic 2025",
+    tasks: [
+      "Integracion de logica con componentes dinamicos, automatizaciones con cursor e integracion MCP.",
+      "Acelere los tiempos de desarrollo mediante Cursor, integrando las rules y contextos logrando entregas en menor tiempo.",
+    ],
+  },
+  {
     company: "Modatex",
     id: "modatex",
     role: "Frontend Mobile",
