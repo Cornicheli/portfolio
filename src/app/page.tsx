@@ -50,14 +50,17 @@ export default function Home() {
           <div className="flex flex-col justify-center my-1.5 items-start gap-4 w-full lg:w-2xl">
             <Title>Gabriel Cornide</Title>
             <Paragraph>
-              Desarrollador Frontend Web & Mobile con +3 años de experiencia en
-              interfaces modernas, escalables y accesibles.
+              Dev Front-End con 3 años de experiencia especializado en React y
+              React Native.
             </Paragraph>
             <Paragraph>
-              Especializado en React, React Native, TypeScript y Tailwind CSS.
-              Gran dominio de diseño UI/UX con Figma y metodologías ágiles como
-              Scrum. He trabajado en proyectos de e-commerce, apps híbridas y
-              sitios web responsivos para empresas de Argentina, Chile y EE.UU.
+              Desarrollo mediante el uso de IA (Cursor y Claude) y la
+              automatización, logrando entregas más ágiles y código escalable.
+            </Paragraph>
+            <Paragraph>
+              Me enfoco en una arquitectura sólida en TypeScript, siempre
+              orientado a resolver problemas complejos en entornos de startups y
+              equipos remotos.
             </Paragraph>
           </div>
 
@@ -85,7 +88,7 @@ export default function Home() {
             </div>
 
             <a
-              href="/GabrielCornideCV.pdf"
+              href="/CV_Gabriel_Cornide_FrontEnd_IA.pdf"
               download
               className="bg-[#F2F2F2] rounded opacity-80 text-black py-2 text-1xl w-32 flex items-center justify-center cursor-pointer my-1.5"
             >
