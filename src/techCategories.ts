@@ -8,7 +8,6 @@ export const techCategories = [
       { src: "/icons/react.png", alt: "React" },
       { src: "/icons/redux.png", alt: "Redux" },
       { src: "/icons/tailwind.png", alt: "Tailwind CSS" },
-      { src: "/icons/bootstrap.png", alt: "Bootstrap" },
       { src: "/icons/nextjs.png", alt: "Next.js" },
     ],
   },
@@ -23,6 +22,9 @@ export const techCategories = [
   {
     name: "Tools",
     icons: [
+      { src: "/icons/cursor-ia.png", alt: "Cursor IA" },
+      { src: "/icons/claude.png", alt: "Claude Code" },
+      { src: "/icons/intellij.png", alt: "Intellij IDE" },
       { src: "/icons/npm.png", alt: "npm" },
       { src: "/icons/gitHubStack.png", alt: "GitHub" },
       { src: "/icons/postman.png", alt: "Postman" },

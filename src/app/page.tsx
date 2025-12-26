@@ -1,5 +1,3 @@
-"use client";
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import Header from "@/components/Header";
 import CircleContact from "@/components/CircleContact";
@@ -7,7 +5,7 @@ import Title from "@/components/fonts/Title";
 import Paragraph from "@/components/fonts/Paragraph";
 import TimelineExperience from "@/components/TimelineExperience";
 import TechIconsSection from "@/components/TechIconsSection";
-import Carousel from "@/components/Carousel";
+import ResponsiveProjectCarousel from "@/components/ResponsiveProjectCarousel";
 
 import fullstack from "@./public/images/fullstack.webp";
 import githubW from "@./public/icons/githubW.png";
@@ -16,29 +14,8 @@ import linkedinW from "@./public/icons/linkedinW.png";
 
 import { experiences } from "@/experiences";
 import { techCategories } from "@/techCategories";
-import { projectImages } from "@/projectImages";
 
 export default function Home() {
-  const [widthDimension, setWidthDimension] = useState(
-    typeof window !== "undefined"
-      ? window.innerWidth > 1024
-        ? 3
-        : window.innerWidth > 768
-        ? 2
-        : 1
-      : 3
-  );
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWidthDimension(
-        window.innerWidth > 1024 ? 3 : window.innerWidth > 768 ? 2 : 1
-      );
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
     <>
       <Header />
@@ -50,8 +27,8 @@ export default function Home() {
           <div className="flex flex-col justify-center my-1.5 items-start gap-4 w-full lg:w-2xl">
             <Title>Gabriel Cornide</Title>
             <Paragraph>
-              Dev Front-End con 3 años de experiencia especializado en React y
-              React Native.
+              Dev Front-End IA con 3 años de experiencia especializado en React
+              y React Native.
             </Paragraph>
             <Paragraph>
               Desarrollo mediante el uso de IA (Cursor y Claude) y la
@@ -105,29 +82,12 @@ export default function Home() {
           className="flex flex-col gap-8 xl:pl-28 mt-10 scroll-mt-20"
           id="tecnologias"
         >
-          <h3 className="text-white text-xl font-semibold">Front-end</h3>
+          <h3 className="text-white text-xl font-semibold">Front-End IA</h3>
           <TechIconsSection categories={techCategories} />
           <h3 className="text-white text-xl font-semibold" id="proyectos">
             Proyectos Full-Stack
           </h3>
-          <div
-            className={`transition-all duration-700 ease-in-out mt-10 h-[250px] lg:h-[350px]`}
-          >
-            <Carousel
-              items={projectImages.map((img) => (
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  width={550}
-                  height={550}
-                  className={`rounded my-1`}
-                  key={img.src}
-                />
-              ))}
-              autoplay={true}
-              slidesPerView={widthDimension}
-            />
-          </div>
+          <ResponsiveProjectCarousel />
         </div>
       </section>
     </>
