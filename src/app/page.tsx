@@ -1,3 +1,6 @@
+"use client";
+import { useEffect, useState } from "react";
+import { useTranslation } from 'react-i18next';
 import Image from "next/image";
 import Header from "@/components/Header";
 import CircleContact from "@/components/CircleContact";
@@ -5,7 +8,7 @@ import Title from "@/components/fonts/Title";
 import Paragraph from "@/components/fonts/Paragraph";
 import TimelineExperience from "@/components/TimelineExperience";
 import TechIconsSection from "@/components/TechIconsSection";
-import ResponsiveProjectCarousel from "@/components/ResponsiveProjectCarousel";
+import Carousel from "@/components/Carousel";
 
 import fullstack from "@./public/images/fullstack.webp";
 import githubW from "@./public/icons/githubW.png";
@@ -14,8 +17,30 @@ import linkedinW from "@./public/icons/linkedinW.png";
 
 import { experiences } from "@/experiences";
 import { techCategories } from "@/techCategories";
+import { projectImages } from "@/projectImages";
 
 export default function Home() {
+  const { t } = useTranslation('common');
+  const [widthDimension, setWidthDimension] = useState(
+    typeof window !== "undefined"
+      ? window.innerWidth > 1024
+        ? 3
+        : window.innerWidth > 768
+        ? 2
+        : 1
+      : 3
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidthDimension(
+        window.innerWidth > 1024 ? 3 : window.innerWidth > 768 ? 2 : 1
+      );
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
       <Header />
@@ -25,25 +50,21 @@ export default function Home() {
       >
         <div className="flex min-h-screen flex-col bg-[#181818] justify-around items-center xl:flex-row">
           <div className="flex flex-col justify-center my-1.5 items-start gap-4 w-full lg:w-2xl">
-            <Title>Gabriel Cornide</Title>
+            <Title>{t('hero.name')}</Title>
             <Paragraph>
-              Dev Front-End IA con 3 años de experiencia especializado en React
-              y React Native.
+              {t('hero.description1')}
             </Paragraph>
             <Paragraph>
-              Desarrollo mediante el uso de IA (Cursor y Claude) y la
-              automatización, logrando entregas más ágiles y código escalable.
+              {t('hero.description2')}
             </Paragraph>
             <Paragraph>
-              Me enfoco en una arquitectura sólida en TypeScript, siempre
-              orientado a resolver problemas complejos en entornos de startups y
-              equipos remotos.
+              {t('hero.description3')}
             </Paragraph>
           </div>
 
           <div className="flex flex-col items-center justify-center">
             <Image
-              className=" rounded"
+              className="rounded"
               src={fullstack}
               alt="Gabriel Cornide"
               width={240}
@@ -65,11 +86,11 @@ export default function Home() {
             </div>
 
             <a
-              href="/CV_Gabriel_Cornide_FrontEnd_IA.pdf"
+              href="/Gabriel-Cornide-FrontEnd-Developer.pdf"
               download
-              className="bg-[#F2F2F2] rounded opacity-80 text-black py-2 text-1xl w-32 flex items-center justify-center cursor-pointer my-1.5"
+              className="bg-[#F2F2F2] rounded opacity-80 text-black py-2 text-xl w-32 flex items-center justify-center cursor-pointer my-1.5"
             >
-              Descarga CV
+              {t('hero.downloadCV')}
             </a>
           </div>
         </div>
@@ -82,12 +103,29 @@ export default function Home() {
           className="flex flex-col gap-8 xl:pl-28 mt-10 scroll-mt-20"
           id="tecnologias"
         >
-          <h3 className="text-white text-xl font-semibold">Front-End IA</h3>
+          <h3 className="text-white text-xl font-semibold">{t('hero.frontendTitle')}</h3>
           <TechIconsSection categories={techCategories} />
           <h3 className="text-white text-xl font-semibold" id="proyectos">
-            Proyectos Full-Stack
+            {t('hero.projectsTitle')}
           </h3>
-          <ResponsiveProjectCarousel />
+          <div
+            className={`transition-all duration-700 ease-in-out mt-10 h-[250px] lg:h-[350px]`}
+          >
+            <Carousel
+              items={projectImages.map((img) => (
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  width={550}
+                  height={550}
+                  className={`rounded my-1`}
+                  key={img.src}
+                />
+              ))}
+              autoplay={true}
+              slidesPerView={widthDimension}
+            />
+          </div>
         </div>
       </section>
     </>

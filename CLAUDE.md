@@ -71,13 +71,19 @@ import image from "@./public/images/image.png";
 
 1. **Client Components**: Main page uses `"use client"` directive for interactive features (responsive carousel, window resize handling)
 
-2. **Responsive Design**: Components adapt based on breakpoints (mobile: <768px, tablet: 768-1024px, desktop: >1024px)
+2. **SSR-Safe Client Components**: `ResponsiveProjectCarousel` uses SSR-safe initialization pattern - initializes state with a default value (desktop: 3 slides) and updates in `useEffect` after mount to prevent hydration mismatches
 
-3. **Data-Driven UI**: Experience timeline, tech icons, and project carousel are rendered from TypeScript data files, making content updates straightforward
+3. **Dynamic Imports**: Client-side-only components like `Carousel` are loaded with `next/dynamic` using `ssr: false` to prevent server-side rendering issues with browser APIs
 
-4. **Image Optimization**: Uses Next.js `<Image>` component for automatic optimization
+4. **Responsive Design**: Components adapt based on breakpoints (mobile: <768px, tablet: 768-1024px, desktop: >1024px)
 
-5. **Modular Components**: Typography components (Title, SubTitle, Paragraph) centralize text styling
+5. **Data-Driven UI**: Experience timeline, tech icons, and project carousel are rendered from TypeScript data files, making content updates straightforward
+
+6. **Image Optimization**: Uses Next.js `<Image>` component for automatic optimization
+
+7. **Modular Components**: Typography components (Title, SubTitle, Paragraph) centralize text styling
+
+8. **Swiper Configuration**: Carousel uses Swiper.js with Autoplay and Pagination modules, configured with 2s autoplay delay and clickable pagination
 
 ## TypeScript Configuration
 

@@ -15,12 +15,12 @@ export interface TechIconsSectionProps {
 }
 
 export interface Experience {
-  company: string;
-  role: string;
-  location: string;
-  date: string;
-  tasks: string[];
   id: string;
+  company: string;
+  roleKey: string;
+  locationKey: string;
+  date: string;
+  taskKeys: string[];
 }
 
 export interface TimelineExperienceProps {

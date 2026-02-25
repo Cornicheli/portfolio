@@ -1,0 +1,69 @@
+{
+  "nav": {
+    "about": "About Me",
+    "experience": "Experience",
+    "technologies": "Technologies",
+    "projects": "Projects"
+  },
+  "hero": {
+    "name": "Gabriel Cornide",
+    "description1": "Semi-Senior (SSR) Front-End Mobile and Web Developer with high performance. Specialized in React, React Native and scalable architectures with TypeScript.",
+    "description2": "I maintain a solid technical level in Backend (Junior+) using Node.js and MongoDB, which allows me to apply a comprehensive vision to development.",
+    "description3": "From UI/UX design in Figma to service integration and AI optimization (Cursor, Claude), I deliver complete and scalable solutions.",
+    "downloadCV": "Download CV",
+    "frontendTitle": "Front-end",
+    "projectsTitle": "Full-Stack Projects"
+  },
+  "experience": {
+    "gire": {
+      "role": "Front-End Developer AI",
+      "location": "Buenos Aires, Parque Patricio (Hybrid)",
+      "task1": "Reduced delivery times by integrating AI agents (Cursor, Claude) and automating development workflows.",
+      "task2": "Developed scalable interfaces for the Fintech sector using React and TypeScript, integrating services via Axios and MongoDB."
+    },
+    "modatex": {
+      "role": "Front-End Mobile Developer",
+      "location": "Buenos Aires, Flores (Hybrid)",
+      "task1": "Led end-to-end development of ModapagoApp using React Native Expo, optimizing payment flows and catalogs.",
+      "task2": "Designed high-fidelity UI/UX prototypes in Figma and improved performance by optimizing rendering logic and API consumption."
+    },
+    "homedeluxe": {
+      "role": "Software Engineer (Project)",
+      "location": "Buenos Aires (Remote)",
+      "task1": "Developed a high-fidelity web platform from scratch using React, TypeScript and Tailwind CSS.",
+      "task2": "Led requirements gathering and UI/UX interface design in Figma.",
+      "task3": "Managed production deployment infrastructure via FTP, ensuring high availability."
+    },
+    "adminrolon": {
+      "role": "Software Engineer (Project)",
+      "location": "Buenos Aires (Remote)",
+      "task1": "Led end-to-end development of a custom management system using React, TypeScript and Tailwind CSS.",
+      "task2": "Digitized complex administrative processes, optimizing interfaces and workflows, from Figma design to domain configuration."
+    },
+    "bluerabbit": {
+      "role": "Front-End Developer",
+      "location": "Buenos Aires, Retiro (Remote)",
+      "task1": "Developed responsive and scalable web platforms using Next.js, Tailwind CSS and TypeScript.",
+      "task2": "Optimized SEO and loading speed implementing Server-Side Rendering (SSR) and managed state with TanStack Query."
+    },
+    "techforb": {
+      "role": "Full-Stack Mobile Developer",
+      "location": "USA, Florida (Remote)",
+      "task1": "Developed E-commerce mobile applications using React Native Expo.",
+      "task2": "Integrated Firebase services for user authentication and real-time database (Cloud Firestore).",
+      "task3": "Implemented Redux for global state management, improving scalability and sales flows."
+    },
+    "touken": {
+      "role": "Front-End Mobile Developer (Project)",
+      "location": "Chile, Santiago (Remote)",
+      "task1": "Developed a cross-platform E-commerce (Web and Mobile) with React, React Native Expo and TypeScript.",
+      "task2": "Ensured visual and technical fluidity between the web version and the native application using Tailwind CSS.",
+      "task3": "Implemented transactional logic and global state management for a stable pre-launch."
+    }
+  },
+  "tech": {
+    "frontend": "Front-end",
+    "backend": "Back-end",
+    "tools": "Tools"
+  }
+}

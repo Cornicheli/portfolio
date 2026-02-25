@@ -1,24 +1,17 @@
 "use client";
 import Image from "next/image";
-import dynamic from "next/dynamic";
+import { useTranslation } from 'react-i18next';
 import SubTitle from "./fonts/SubTitle";
 import { JobImage, TimelineExperienceProps } from "@/interfaces";
 import { ImagenesJobs } from "@/experiencieJobs";
 import { useState } from "react";
+import CarrouselJobs from "./CarrouselJobs";
 import CircleExperience from "./CircleExperience";
-
-const CarrouselJobs = dynamic(() => import("./CarrouselJobs"), {
-  loading: () => (
-    <div className="w-full h-[450px] lg:w-[650px] lg:h-[450px] flex items-center justify-center">
-      <div className="animate-pulse text-white">Cargando experiencia...</div>
-    </div>
-  ),
-  ssr: false,
-});
 
 export default function TimelineExperience({
   experiences,
 }: TimelineExperienceProps) {
+  const { t } = useTranslation('common');
   const [imagenesCarrusel, setImagenesCarrusel] =
     useState<JobImage[]>(ImagenesJobs);
 
@@ -56,16 +49,16 @@ export default function TimelineExperience({
                     className="cursor-pointer"
                     onClick={() => onClickImg(exp.id!)}
                   >
-                    <SubTitle key={exp.id}>
-                      {`${exp.company} · ${exp.role} · ${exp.location} · ${exp.date}`}
+                    <SubTitle>
+                      {`${exp.company} · ${t(exp.roleKey)} · ${t(exp.locationKey)} · ${exp.date}`}
                     </SubTitle>
                   </button>
                 </div>
                 <ul className="list-disc ml-6 mt-2">
-                  {exp.tasks.map((task, i) => (
+                  {exp.taskKeys.map((taskKey, i) => (
                     <li key={i}>
                       <p className="text-[#F2F2F2] xl:text-lg font-lato">
-                        {task}
+                        {t(taskKey)}
                       </p>
                     </li>
                   ))}
@@ -81,15 +74,15 @@ export default function TimelineExperience({
         <CarrouselJobs
           dimension={dimension}
           items={imagenesCarrusel.map((map) => (
-            <div key={map.src} className={`${dimension} relative`}>
-              <Image
-                src={map.src}
-                alt={map.alt}
-                className="rounded object-contain"
-                fill={true}
-                sizes="(max-width: 768px) 100vw, 650px"
-              />
-            </div>
+            <Image
+              src={map.src}
+              alt={map.alt}
+              className={`${dimension} rounded object-contain`}
+              key={map.src}
+              // height={650}
+              // width={350}
+              fill={true}
+            />
           ))}
           autoplay={true}
           slidesPerView={1}
