@@ -6,10 +6,10 @@ export default function SubTitle({
   className?: string;
 }) {
   return (
-    <h1
-      className={`text-[#F2F2F2] text-xl xl:text-xl font-nunito cursor-pointer ${className}`}
+    <h2
+      className={`text-white text-lg md:text-xl font-nunito font-semibold cursor-pointer ${className}`}
     >
       {children}
-    </h1>
+    </h2>
   );
 }

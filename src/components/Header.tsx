@@ -17,28 +17,59 @@ export default function Header() {
     setCurrentLang(newLang);
   };
 
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    const element = document.querySelector(targetId);
+    if (element) {
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
-    <header className="bg-[#0a0a0a] opacity-90 text-white p-4 sticky top-0 left-0 w-full z-50">
-      <div className="container mx-auto flex justify-between items-center">
+    <header className="bg-[#0a0a0a]/95 backdrop-blur-md text-white py-4 px-6 sticky top-0 left-0 w-full z-50 border-b border-white/10">
+      <div className="container mx-auto flex justify-between items-center max-w-7xl">
         <nav>
-          <ul className="flex space-x-4 justify-center">
+          <ul className="flex space-x-8 justify-center">
             <li>
-              <Link href="#sobre-mi" className="hover:underline">
+              <Link
+                href="#sobre-mi"
+                onClick={(e) => handleSmoothScroll(e, '#sobre-mi')}
+                className="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium"
+              >
                 {t('nav.about')}
               </Link>
             </li>
             <li>
-              <Link href="#experiencia" className="hover:underline">
+              <Link
+                href="#experiencia"
+                onClick={(e) => handleSmoothScroll(e, '#experiencia')}
+                className="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium"
+              >
                 {t('nav.experience')}
               </Link>
             </li>
             <li>
-              <Link href="#tecnologias" className="hover:underline">
+              <Link
+                href="#tecnologias"
+                onClick={(e) => handleSmoothScroll(e, '#tecnologias')}
+                className="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium"
+              >
                 {t('nav.technologies')}
               </Link>
             </li>
             <li>
-              <Link href="#proyectos" className="hover:underline">
+              <Link
+                href="#proyectos"
+                onClick={(e) => handleSmoothScroll(e, '#proyectos')}
+                className="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium"
+              >
                 {t('nav.projects')}
               </Link>
             </li>
@@ -47,7 +78,7 @@ export default function Header() {
 
         <button
           onClick={toggleLanguage}
-          className="ml-4 px-3 py-1 rounded bg-white/10 hover:bg-white/20 transition-colors text-sm font-medium"
+          className="ml-4 px-4 py-2 rounded-lg glass-effect hover:bg-white/10 transition-all duration-200 text-sm font-semibold"
           aria-label="Toggle language"
         >
           {currentLang === 'es' ? 'EN' : 'ES'}

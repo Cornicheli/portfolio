@@ -6,6 +6,6 @@ export default function Paragraph({
   className?: string;
 }) {
   return (
-    <p className={`text-[#F2F2F2] text-xl xl:text-2xl font-lato ${className}`}>{children}</p>
+    <p className={`text-gray-300 text-lg md:text-xl xl:text-xl font-lato leading-relaxed ${className}`}>{children}</p>
   );
 }

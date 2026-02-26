@@ -1,0 +1,289 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e4]:
+        - list [ref=e5]:
+          - listitem [ref=e6]:
+            - link "Sobre mi" [ref=e7] [cursor=pointer]:
+              - /url: "#sobre-mi"
+          - listitem [ref=e8]:
+            - link "Experiencia" [ref=e9] [cursor=pointer]:
+              - /url: "#experiencia"
+          - listitem [ref=e10]:
+            - link "Tecnologías" [ref=e11] [cursor=pointer]:
+              - /url: "#tecnologias"
+          - listitem [ref=e12]:
+            - link "Proyectos" [ref=e13] [cursor=pointer]:
+              - /url: "#proyectos"
+      - button "Toggle language" [ref=e14]: EN
+  - generic [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - heading "Gabriel Cornide" [level=1] [ref=e18]
+        - generic [ref=e19]:
+          - paragraph [ref=e20]: Desarrollador Semi-Senior (SSR) Front-End Mobile y Web de alto rendimiento. Especializado en React, React Native y arquitecturas escalables con TypeScript.
+          - paragraph [ref=e21]: Mantengo un nivel técnico sólido en Backend (Junior+) utilizando Node.js y MongoDB, lo que me permite aplicar una visión integral al desarrollo.
+          - paragraph [ref=e22]: Desde el diseño UI/UX en Figma hasta la integración de servicios y la optimización con IA (Cursor, Claude), entrego soluciones completas y escalables.
+      - generic [ref=e23]:
+        - img "Gabriel Cornide" [ref=e25]
+        - generic [ref=e26]:
+          - link "logo" [ref=e27] [cursor=pointer]:
+            - /url: https://github.com/Cornicheli
+            - img "logo" [ref=e28]
+          - link "logo" [ref=e29] [cursor=pointer]:
+            - /url: mailto:gabrielcornide@gmail.com
+            - img "logo" [ref=e30]
+          - link "logo" [ref=e31] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/gabriel-cornide-99624923b/
+            - img "logo" [ref=e32]
+        - link "Descarga CV" [ref=e33] [cursor=pointer]:
+          - /url: /Gabriel-Cornide-FrontEnd-Developer.pdf
+    - generic [ref=e34]:
+      - heading "Experiencia" [level=2] [ref=e35]
+      - generic [ref=e37]:
+        - list [ref=e40]:
+          - listitem [ref=e41]:
+            - generic [ref=e44]:
+              - button "Gire Frontend Developer IA · CABA, Parque Patricio (Híbrido) Agos 2025 – Dic 2025" [ref=e45] [cursor=pointer]:
+                - heading "Gire" [level=2] [ref=e46]
+                - paragraph [ref=e47]: Frontend Developer IA · CABA, Parque Patricio (Híbrido)
+                - paragraph [ref=e48]: Agos 2025 – Dic 2025
+              - list [ref=e49]:
+                - listitem [ref=e50]:
+                  - generic [ref=e51]: •
+                  - paragraph [ref=e52]: Reduje los tiempos de entrega integrando agentes de IA (Cursor, Claude) y automatizando workflows de desarrollo.
+                - listitem [ref=e53]:
+                  - generic [ref=e54]: •
+                  - paragraph [ref=e55]: Desarrollé interfaces escalables para el sector Fintech usando React y TypeScript, integrando servicios mediante Axios y MongoDB.
+          - listitem [ref=e56]:
+            - generic [ref=e59]:
+              - button "Modatex Frontend Mobile Developer · CABA, Flores (Híbrido) Jul 2024 – May 2025" [ref=e60] [cursor=pointer]:
+                - heading "Modatex" [level=2] [ref=e61]
+                - paragraph [ref=e62]: Frontend Mobile Developer · CABA, Flores (Híbrido)
+                - paragraph [ref=e63]: Jul 2024 – May 2025
+              - list [ref=e64]:
+                - listitem [ref=e65]:
+                  - generic [ref=e66]: •
+                  - paragraph [ref=e67]: Lideré el desarrollo end-to-end de ModapagoApp utilizando React Native Expo, optimizando flujos de pago y catálogos.
+                - listitem [ref=e68]:
+                  - generic [ref=e69]: •
+                  - paragraph [ref=e70]: Diseñé prototipos UI/UX de alta fidelidad en Figma y mejoré el rendimiento optimizando la lógica de renderizado y el consumo de APIs.
+          - listitem [ref=e71]:
+            - generic [ref=e74]:
+              - button "HomeDeluxe Software Engineer (Proyecto) · Buenos Aires (Remoto) Ene – Jun 2024" [ref=e75] [cursor=pointer]:
+                - heading "HomeDeluxe" [level=2] [ref=e76]
+                - paragraph [ref=e77]: Software Engineer (Proyecto) · Buenos Aires (Remoto)
+                - paragraph [ref=e78]: Ene – Jun 2024
+              - list [ref=e79]:
+                - listitem [ref=e80]:
+                  - generic [ref=e81]: •
+                  - paragraph [ref=e82]: Desarrollé una plataforma web de alta fidelidad desde cero utilizando React, TypeScript y Tailwind CSS.
+                - listitem [ref=e83]:
+                  - generic [ref=e84]: •
+                  - paragraph [ref=e85]: Lideré el relevamiento de requisitos y el diseño de interfaces UI/UX en Figma.
+                - listitem [ref=e86]:
+                  - generic [ref=e87]: •
+                  - paragraph [ref=e88]: Gestioné la infraestructura de despliegue en producción mediante FTP, asegurando alta disponibilidad.
+          - listitem [ref=e89]:
+            - generic [ref=e92]:
+              - button "Administración Rolon Software Engineer (Proyecto) · Buenos Aires (Remoto) Ene – Abr 2024" [ref=e93] [cursor=pointer]:
+                - heading "Administración Rolon" [level=2] [ref=e94]
+                - paragraph [ref=e95]: Software Engineer (Proyecto) · Buenos Aires (Remoto)
+                - paragraph [ref=e96]: Ene – Abr 2024
+              - list [ref=e97]:
+                - listitem [ref=e98]:
+                  - generic [ref=e99]: •
+                  - paragraph [ref=e100]: Lideré el desarrollo end-to-end de un sistema de gestión a medida utilizando React, TypeScript y Tailwind CSS.
+                - listitem [ref=e101]:
+                  - generic [ref=e102]: •
+                  - paragraph [ref=e103]: Digitalicé procesos administrativos complejos, optimizando interfaces y flujos de trabajo, desde el diseño en Figma hasta la configuración de dominios.
+          - listitem [ref=e104]:
+            - generic [ref=e107]:
+              - button "Bluerabbit Frontend Developer · CABA, Retiro (Remoto) Jul 2023 – Jun 2024" [ref=e108] [cursor=pointer]:
+                - heading "Bluerabbit" [level=2] [ref=e109]
+                - paragraph [ref=e110]: Frontend Developer · CABA, Retiro (Remoto)
+                - paragraph [ref=e111]: Jul 2023 – Jun 2024
+              - list [ref=e112]:
+                - listitem [ref=e113]:
+                  - generic [ref=e114]: •
+                  - paragraph [ref=e115]: Desarrollé plataformas web responsivas y escalables utilizando Next.js, Tailwind CSS y TypeScript.
+                - listitem [ref=e116]:
+                  - generic [ref=e117]: •
+                  - paragraph [ref=e118]: Optimicé el SEO y la velocidad de carga implementando Server-Side Rendering (SSR) y gestioné el estado con TanStack Query.
+          - listitem [ref=e119]:
+            - generic [ref=e122]:
+              - button "Techforb Full-Stack Mobile Developer · EEUU, Florida (Remoto) Sep 2023 – Abr 2024" [ref=e123] [cursor=pointer]:
+                - heading "Techforb" [level=2] [ref=e124]
+                - paragraph [ref=e125]: Full-Stack Mobile Developer · EEUU, Florida (Remoto)
+                - paragraph [ref=e126]: Sep 2023 – Abr 2024
+              - list [ref=e127]:
+                - listitem [ref=e128]:
+                  - generic [ref=e129]: •
+                  - paragraph [ref=e130]: Desarrollé aplicaciones móviles de E-commerce utilizando React Native Expo.
+                - listitem [ref=e131]:
+                  - generic [ref=e132]: •
+                  - paragraph [ref=e133]: Integré servicios de Firebase para autenticación de usuarios y base de datos en tiempo real (Cloud Firestore).
+                - listitem [ref=e134]:
+                  - generic [ref=e135]: •
+                  - paragraph [ref=e136]: Implementé Redux para la gestión de estado global, mejorando la escalabilidad y los flujos de venta.
+          - listitem [ref=e137]:
+            - generic [ref=e140]:
+              - button "Touken Frontend Mobile Developer (Proyecto) · Chile, Santiago (Remoto) Feb 2024 – Abr 2024" [ref=e141] [cursor=pointer]:
+                - heading "Touken" [level=2] [ref=e142]
+                - paragraph [ref=e143]: Frontend Mobile Developer (Proyecto) · Chile, Santiago (Remoto)
+                - paragraph [ref=e144]: Feb 2024 – Abr 2024
+              - list [ref=e145]:
+                - listitem [ref=e146]:
+                  - generic [ref=e147]: •
+                  - paragraph [ref=e148]: Desarrollé un E-commerce multiplataforma (Web y Mobile) con React, React Native Expo y TypeScript.
+                - listitem [ref=e149]:
+                  - generic [ref=e150]: •
+                  - paragraph [ref=e151]: Aseguré la fluidez visual y técnica entre la versión web y la aplicación nativa utilizando Tailwind CSS.
+                - listitem [ref=e152]:
+                  - generic [ref=e153]: •
+                  - paragraph [ref=e154]: Implementé la lógica transaccional y la gestión de estados globales para un pre-lanzamiento estable.
+        - generic [ref=e158]:
+          - img "modatex01" [ref=e160]
+          - img "modatex02" [ref=e162]
+          - img "modatex03" [ref=e164]
+          - img "modatex04" [ref=e166]
+          - img "bluerabbit01" [ref=e168]
+          - img "bluerabbit02" [ref=e170]
+          - img "bluerabbit03" [ref=e172]
+          - img "bluerabbit04" [ref=e174]
+          - img "bluerabbit05" [ref=e176]
+          - img "bluerabbit06" [ref=e178]
+          - img "bluerabbit07" [ref=e180]
+          - img "bluerabbit08" [ref=e182]
+          - img "bluerabbit09" [ref=e184]
+          - img "bluerabbit10" [ref=e186]
+          - img "bluerabbit11" [ref=e188]
+          - img "bluerabbit12" [ref=e190]
+          - img "bluerabbit13" [ref=e192]
+          - img "bluerabbit14" [ref=e194]
+          - img "homedeluxe1" [ref=e196]
+          - img "homedeluxe2" [ref=e198]
+          - img "homedeluxe3" [ref=e200]
+          - img "homedeluxe4" [ref=e202]
+          - img "homedeluxe5" [ref=e204]
+          - img "homedeluxe6" [ref=e206]
+          - img "homedeluxe7" [ref=e208]
+          - img "homedeluxe8" [ref=e210]
+          - img "homedeluxe9" [ref=e212]
+          - img "MyTineraryNative" [ref=e214]
+          - img "techforb-0" [ref=e216]
+          - img "techforb-1" [ref=e218]
+          - img "techforb-2" [ref=e220]
+          - img "techforb-3" [ref=e222]
+          - img "techforb-4" [ref=e224]
+          - img "techforb-5" [ref=e226]
+          - img "techforb-6" [ref=e228]
+          - img "techforb-7" [ref=e230]
+          - img "techforb-8" [ref=e232]
+          - img "techforb-9" [ref=e234]
+          - img "techforb-10" [ref=e236]
+          - img "techforb-11" [ref=e238]
+          - img "touken1" [ref=e240]
+          - img "touken2" [ref=e242]
+          - img "touken3" [ref=e244]
+          - img "touken4" [ref=e246]
+          - img "touken5" [ref=e248]
+          - img "touken6" [ref=e250]
+          - img "touken7" [ref=e252]
+          - img "toukenMobile1" [ref=e254]
+          - img "toukenMobile2" [ref=e256]
+          - img "toukenMobile3" [ref=e258]
+          - img "toukenMobile4" [ref=e260]
+          - img "toukenMobile5" [ref=e262]
+          - img "toukenMobile6" [ref=e264]
+          - img "toukenMobile7" [ref=e266]
+          - img "touken-mobile" [ref=e268]
+          - img "administracion Rolon" [ref=e270]
+          - img "administracion Rolon" [ref=e272]
+          - img "administracion Rolon" [ref=e274]
+          - img "administracion Rolon" [ref=e276]
+    - generic [ref=e277]:
+      - heading "Stack Tecnológico" [level=2] [ref=e278]
+      - generic [ref=e280]:
+        - generic [ref=e281]:
+          - heading "Front-end" [level=3] [ref=e282]
+          - generic [ref=e283]:
+            - generic [ref=e284]:
+              - img "HTML5" [ref=e285]
+              - paragraph [ref=e286]: HTML5
+            - generic [ref=e287]:
+              - img "CSS3" [ref=e288]
+              - paragraph [ref=e289]: CSS3
+            - generic [ref=e290]:
+              - img "JavaScript" [ref=e291]
+              - paragraph [ref=e292]: JavaScript
+            - generic [ref=e293]:
+              - img "React" [ref=e294]
+              - paragraph [ref=e295]: React
+            - generic [ref=e296]:
+              - img "Redux" [ref=e297]
+              - paragraph [ref=e298]: Redux
+            - generic [ref=e299]:
+              - img "Tailwind CSS" [ref=e300]
+              - paragraph [ref=e301]: Tailwind CSS
+            - generic [ref=e302]:
+              - img "Next.js" [ref=e303]
+              - paragraph [ref=e304]: Next.js
+        - generic [ref=e305]:
+          - heading "Back-end" [level=3] [ref=e306]
+          - generic [ref=e307]:
+            - generic [ref=e308]:
+              - img "Firebase" [ref=e309]
+              - paragraph [ref=e310]: Firebase
+            - generic [ref=e311]:
+              - img "Node.js" [ref=e312]
+              - paragraph [ref=e313]: Node.js
+            - generic [ref=e314]:
+              - img "MongoDB" [ref=e315]
+              - paragraph [ref=e316]: MongoDB
+        - generic [ref=e317]:
+          - heading "Tools" [level=3] [ref=e318]
+          - generic [ref=e319]:
+            - generic [ref=e320]:
+              - img "Cursor IA" [ref=e321]
+              - paragraph [ref=e322]: Cursor IA
+            - generic [ref=e323]:
+              - img "Claude Code" [ref=e324]
+              - paragraph [ref=e325]: Claude Code
+            - generic [ref=e326]:
+              - img "Intellij IDE" [ref=e327]
+              - paragraph [ref=e328]: Intellij IDE
+            - generic [ref=e329]:
+              - img "npm" [ref=e330]
+              - paragraph [ref=e331]: npm
+            - generic [ref=e332]:
+              - img "GitHub" [ref=e333]
+              - paragraph [ref=e334]: GitHub
+            - generic [ref=e335]:
+              - img "Postman" [ref=e336]
+              - paragraph [ref=e337]: Postman
+            - generic [ref=e338]:
+              - img "Jira" [ref=e339]
+              - paragraph [ref=e340]: Jira
+            - generic [ref=e341]:
+              - img "Figma" [ref=e342]
+              - paragraph [ref=e343]: Figma
+    - generic [ref=e344]:
+      - heading "Proyectos Full-Stack" [level=2] [ref=e345]
+      - generic [ref=e348]:
+        - img "gamecenter-web-1" [ref=e350]
+        - img "gamecenter-web-2" [ref=e352]
+        - img "gamecenter-web-3" [ref=e354]
+        - img "gamecenter-web-4" [ref=e356]
+        - img "gamecenter-web-5" [ref=e358]
+        - img "gamecenter-web-6" [ref=e360]
+        - img "gamecenter-web-7" [ref=e362]
+        - img "my-tinerary-1" [ref=e364]
+        - img "my-tinerary-2" [ref=e366]
+        - img "my-tinerary-3" [ref=e368]
+        - img "my-tinerary-4" [ref=e370]
+        - img "my-tinerary-5" [ref=e372]
+        - img "my-tinerary-6" [ref=e374]
+        - img "my-tinerary-7" [ref=e376]
+        - img "my-tinerary-8" [ref=e378]
+        - img "MyTinerary" [ref=e380]

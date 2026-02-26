@@ -46,31 +46,36 @@ export default function Home() {
       <Header />
       <section
         id="sobre-mi"
-        className="flex-col px-6 flex lg:flex-col xl:p-0 bg-[#181818] my-1"
+        className="flex-col flex lg:flex-col hero-gradient my-1"
       >
-        <div className="flex min-h-screen flex-col bg-[#181818] justify-around items-center xl:flex-row">
-          <div className="flex flex-col justify-center my-1.5 items-start gap-4 w-full lg:w-2xl">
+        <div className="flex min-h-screen flex-col justify-center items-center xl:flex-row xl:justify-between xl:gap-16 max-w-7xl mx-auto py-20 px-6 xl:px-16">
+          <div className="flex flex-col justify-center items-start gap-6 w-full xl:w-1/2 xl:max-w-2xl">
             <Title>{t('hero.name')}</Title>
-            <Paragraph>
-              {t('hero.description1')}
-            </Paragraph>
-            <Paragraph>
-              {t('hero.description2')}
-            </Paragraph>
-            <Paragraph>
-              {t('hero.description3')}
-            </Paragraph>
+            <div className="flex flex-col gap-5 mt-2">
+              <Paragraph>
+                {t('hero.description1')}
+              </Paragraph>
+              <Paragraph>
+                {t('hero.description2')}
+              </Paragraph>
+              <Paragraph>
+                {t('hero.description3')}
+              </Paragraph>
+            </div>
           </div>
 
-          <div className="flex flex-col items-center justify-center">
-            <Image
-              className="rounded"
-              src={fullstack}
-              alt="Gabriel Cornide"
-              width={240}
-              height={340}
-            />
-            <div className="items-center justify-center flex gap-6 my-3">
+          <div className="flex flex-col items-center justify-center gap-8 mt-12 xl:mt-0">
+            <div className="relative">
+              <Image
+                className="rounded-2xl shadow-md"
+                src={fullstack}
+                alt="Gabriel Cornide"
+                width={280}
+                height={380}
+                priority
+              />
+            </div>
+            <div className="items-center justify-center flex gap-6">
               <CircleContact
                 href="https://github.com/Cornicheli"
                 src={githubW}
@@ -88,43 +93,60 @@ export default function Home() {
             <a
               href="/Gabriel-Cornide-FrontEnd-Developer.pdf"
               download
-              className="bg-[#F2F2F2] rounded opacity-80 text-black py-2 text-xl w-32 flex items-center justify-center cursor-pointer my-1.5"
+              className="glass-effect rounded-lg text-white py-3 px-8 text-base font-semibold flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-white/10 hover:scale-105"
             >
               {t('hero.downloadCV')}
             </a>
           </div>
         </div>
 
-        <div id="experiencia" className="scroll-mt-20">
+        <div id="experiencia" className="scroll-mt-20 bg-[#0a0a0a] w-full">
+          <div className="px-6 md:px-8 xl:px-12 pt-16 max-w-[1600px] mx-auto">
+            <h2 className="text-white text-3xl md:text-4xl xl:text-5xl font-nunito font-bold mb-8">
+              {t('nav.experience')}
+            </h2>
+          </div>
           <TimelineExperience experiences={experiences} />
         </div>
 
-        <div
-          className="flex flex-col gap-8 xl:pl-28 mt-10 scroll-mt-20"
-          id="tecnologias"
-        >
-          <h3 className="text-white text-xl font-semibold">{t('hero.frontendTitle')}</h3>
-          <TechIconsSection categories={techCategories} />
-          <h3 className="text-white text-xl font-semibold" id="proyectos">
-            {t('hero.projectsTitle')}
-          </h3>
+        <div className="w-full bg-[#181818]">
           <div
-            className={`transition-all duration-700 ease-in-out mt-10 h-[250px] lg:h-[350px]`}
+            className="flex flex-col gap-10 px-6 md:px-8 xl:px-12 py-16 xl:py-20 scroll-mt-20 max-w-[1600px] mx-auto w-full"
+            id="tecnologias"
           >
-            <Carousel
-              items={projectImages.map((img) => (
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  width={550}
-                  height={550}
-                  className={`rounded my-1`}
-                  key={img.src}
-                />
-              ))}
-              autoplay={true}
-              slidesPerView={widthDimension}
-            />
+            <h2 className="text-white text-4xl md:text-4xl xl:text-5xl font-nunito font-bold">
+              {t('hero.frontendTitle')}
+            </h2>
+            <TechIconsSection categories={techCategories} />
+          </div>
+        </div>
+
+        <div className="w-full bg-[#0a0a0a]">
+          <div
+            className="flex flex-col gap-10 px-6 md:px-8 xl:px-12 py-16 xl:py-20 scroll-mt-20 max-w-[1600px] mx-auto w-full"
+            id="proyectos"
+          >
+            <h2 className="text-white text-4xl md:text-4xl xl:text-5xl font-nunito font-bold">
+              {t('hero.projectsTitle')}
+            </h2>
+            <div
+              className={`transition-all duration-700 ease-in-out h-[250px] lg:h-[350px]`}
+            >
+              <Carousel
+                items={projectImages.map((img) => (
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    width={550}
+                    height={550}
+                    className={`rounded-xl my-1`}
+                    key={img.src}
+                  />
+                ))}
+                autoplay={true}
+                slidesPerView={widthDimension}
+              />
+            </div>
           </div>
         </div>
       </section>

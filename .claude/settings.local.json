@@ -42,7 +42,18 @@
       "Bash(npm start)",
       "Bash(npx tsc:*)",
       "Bash(lsof:*)",
-      "Bash(xargs kill -9)"
+      "Bash(xargs kill -9)",
+      "Skill(superpowers:brainstorming)",
+      "mcp__plugin_compound-engineering_pw__browser_navigate",
+      "mcp__plugin_compound-engineering_pw__browser_take_screenshot",
+      "mcp__plugin_compound-engineering_pw__browser_resize",
+      "mcp__plugin_compound-engineering_pw__browser_close",
+      "mcp__plugin_compound-engineering_pw__browser_click",
+      "mcp__plugin_compound-engineering_pw__browser_snapshot",
+      "mcp__plugin_compound-engineering_pw__browser_run_code",
+      "Skill(frontend-design:frontend-design)",
+      "WebSearch",
+      "mcp__plugin_compound-engineering_pw__browser_wait_for"
     ]
   }
 }
