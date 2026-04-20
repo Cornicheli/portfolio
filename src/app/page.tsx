@@ -111,7 +111,7 @@ export default function Home() {
               </div>
 
               <a
-                href="/Gabriel_Cornide_FrontEnd_CV.pdf"
+                href="/Gabriel_Cornide_Frontend_CV.pdf"
                 download
                 className="glass-effect rounded-lg text-white py-3 px-8 text-base font-semibold flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-white/10 hover:scale-105"
               >
