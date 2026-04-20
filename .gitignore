@@ -40,6 +40,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# claude code
+.claude/
+
 # temp files
 *.html
 current-view.md
