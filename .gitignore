@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# claude code
+.claude/
+
+# temp files
+*.html
+current-view.md
+nav-links.md
+*.png
+!public/**/*.png
+!public/**/*.webp

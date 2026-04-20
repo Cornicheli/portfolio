@@ -1,24 +1,17 @@
 "use client";
 import Image from "next/image";
-import dynamic from "next/dynamic";
+import { useTranslation } from 'react-i18next';
 import SubTitle from "./fonts/SubTitle";
 import { JobImage, TimelineExperienceProps } from "@/interfaces";
 import { ImagenesJobs } from "@/experiencieJobs";
 import { useState } from "react";
+import CarrouselJobs from "./CarrouselJobs";
 import CircleExperience from "./CircleExperience";
-
-const CarrouselJobs = dynamic(() => import("./CarrouselJobs"), {
-  loading: () => (
-    <div className="w-full h-[450px] lg:w-[650px] lg:h-[450px] flex items-center justify-center">
-      <div className="animate-pulse text-white">Cargando experiencia...</div>
-    </div>
-  ),
-  ssr: false,
-});
 
 export default function TimelineExperience({
   experiences,
 }: TimelineExperienceProps) {
+  const { t } = useTranslation('common');
   const [imagenesCarrusel, setImagenesCarrusel] =
     useState<JobImage[]>(ImagenesJobs);
 
@@ -35,65 +28,77 @@ export default function TimelineExperience({
 
   const dimension =
     imagenesCarrusel.length > 0 && imagenesCarrusel[0].type === "mobile"
-      ? "w-full h-[450px] lg:w-[650px] lg:h-[450px]"
-      : "w-full h-[450px] lg:w-[650px] lg:h-[450px]";
+      ? "w-full h-[500px] md:h-[550px] xl:w-full xl:h-[600px]"
+      : "w-full h-[450px] md:h-[500px] xl:w-full xl:h-[550px]";
 
   return (
-    <div className="flex flex-col md:flex-col xl:flex-row bg-[#181818] justify-around transition-all duration-200 lg:flex-col items-center">
-      <div className="relative">
-        <div
-          className="absolute left-4 top-0 bottom-0 w-1 bg-white rounded-full z-0 mt-2"
-          style={{ zIndex: 0 }}
-        />
-        <ul className="space-y-8 relative z-10 flex-2 h-auto">
-          {experiences.map((exp, idx) => (
-            <li key={idx} className="flex items-start gap-4">
-              <CircleExperience />
-              <div>
-                <div className="flex items-center gap-2">
+    <div className="w-full bg-[#0a0a0a]">
+      <div className="flex flex-col xl:flex-row justify-between items-start gap-16 xl:gap-20 py-12 xl:py-20 px-6 md:px-8 xl:px-12 max-w-[1600px] mx-auto">
+        {/* Timeline Column */}
+        <div className="relative w-full xl:w-[58%]">
+          <div
+            className="absolute left-4 md:left-6 top-0 bottom-0 w-[3px] bg-gradient-to-b from-white/40 via-white/20 to-white/10 rounded-full z-0"
+            style={{ zIndex: 0 }}
+          />
+          <ul className="space-y-12 relative z-10 pl-2">
+            {experiences.map((exp, idx) => (
+              <li key={idx} className="flex items-start gap-6 md:gap-8">
+                <CircleExperience />
+                <div
+                  className={`rounded-2xl p-6 md:p-8 xl:p-10 flex-1 transition-all duration-300 hover:bg-white/5 shadow-sm ${
+                    idx % 2 === 0 ? 'bg-[#0a0a0a]' : 'bg-[#1a1a1a]'
+                  }`}
+                >
                   <button
                     id={exp.company}
-                    className="cursor-pointer"
+                    className="cursor-pointer text-left w-full"
                     onClick={() => onClickImg(exp.id!)}
                   >
-                    <SubTitle key={exp.id}>
-                      {`${exp.company} · ${exp.role} · ${exp.location} · ${exp.date}`}
+                    <SubTitle className="mb-4">
+                      {exp.company}
                     </SubTitle>
+                    <p className="text-gray-400 text-base md:text-lg mb-2">
+                      {`${t(exp.roleKey)} · ${t(exp.locationKey)}`}
+                    </p>
+                    <p className="text-gray-500 text-sm md:text-base mb-6">
+                      {exp.date}
+                    </p>
                   </button>
+                  <ul className="space-y-4 mt-5">
+                    {exp.taskKeys.map((taskKey, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <span className="text-gray-400 mt-1.5">•</span>
+                        <p className="text-gray-300 text-base md:text-lg font-lato leading-relaxed flex-1">
+                          {t(taskKey)}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <ul className="list-disc ml-6 mt-2">
-                  {exp.tasks.map((task, i) => (
-                    <li key={i}>
-                      <p className="text-[#F2F2F2] xl:text-lg font-lato">
-                        {task}
-                      </p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div
-        className={`${dimension} transition-all duration-700 ease-in-out mt-10`}
-      >
-        <CarrouselJobs
-          dimension={dimension}
-          items={imagenesCarrusel.map((map) => (
-            <div key={map.src} className={`${dimension} relative`}>
-              <Image
-                src={map.src}
-                alt={map.alt}
-                className="rounded object-contain"
-                fill={true}
-                sizes="(max-width: 768px) 100vw, 650px"
-              />
-            </div>
-          ))}
-          autoplay={true}
-          slidesPerView={1}
-        />
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Carousel Column */}
+        <div className="w-full xl:w-[40%] xl:sticky xl:top-24 self-start">
+          <div className={`${dimension} transition-all duration-700 ease-in-out`}>
+            <CarrouselJobs
+              dimension={dimension}
+              items={imagenesCarrusel.map((map) => (
+                <Image
+                  src={map.src}
+                  alt={map.alt}
+                  className={`${dimension} rounded-xl object-contain shadow-md`}
+                  key={map.src}
+                  fill={true}
+                />
+              ))}
+              autoplay={true}
+              slidesPerView={1}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

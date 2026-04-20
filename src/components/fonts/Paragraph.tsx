@@ -1,5 +1,11 @@
-export default function Paragraph({ children }: { children: React.ReactNode }) {
+export default function Paragraph({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
   return (
-    <p className="text-[#F2F2F2] text-1xl xl:text-2xl font-lato">{children}</p>
+    <p className={`text-gray-300 text-lg md:text-xl xl:text-xl font-lato leading-relaxed ${className}`}>{children}</p>
   );
 }

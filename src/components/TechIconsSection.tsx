@@ -5,24 +5,27 @@ export default function TechIconsSection({
   categories,
 }: TechIconsSectionProps) {
   return (
-    <section className="flex flex-col xl:flex-row xl:items-center">
-      <div className="flex flex-col w-full xl:w-auto justify-center">
+    <section className="w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-10">
         {categories.map((cat, idx) => (
-          <div key={idx}>
-            <div className=" flex flex-wrap gap-8 my-4 xl:my-4">
+          <div key={idx} className="flex flex-col">
+            <h3 className="text-gray-400 text-[14px] font-semibold uppercase tracking-wider mb-6 border-b border-white/10 pb-3">
+              {cat.name}
+            </h3>
+            <div className="flex flex-wrap gap-4">
               {cat.icons.map((icon, i) => (
                 <div
                   key={i}
-                  className="flex flex-col justify-between items-center p-1 xl:p-3 rounded-xl bg-neutral-800 hover:scale-105 transition-transform duration-300 w-18 h-22 xl:h-auto xl:w-26"
+                  className="flex flex-col justify-center items-center p-4 rounded-lg bg-[#1a1a1a] hover:bg-[#222] transition-all duration-300 w-24 h-24 group border border-white/5 hover:border-white/20"
                 >
                   <Image
                     src={icon.src}
                     alt={icon.alt}
-                    width={48}
-                    height={48}
-                    className="object-contain"
+                    width={45}
+                    height={45}
+                    className="object-contain mb-2 group-hover:scale-110 transition-transform duration-300"
                   />
-                  <p className="text-white text-xs text-center mt-2">
+                  <p className="text-gray-400 text-[12px] text-center font-medium leading-tight">
                     {icon.alt}
                   </p>
                 </div>

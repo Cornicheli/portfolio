@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "about": "Sobre mi",
+    "experience": "Experiencia",
+    "technologies": "Tecnologías",
+    "projects": "Proyectos"
+  },
+  "hero": {
+    "name": "Gabriel Cornide",
+    "description1": "Desarrollador Frontend Semi-Senior especializado en React, Next.js y TypeScript, con experiencia construyendo interfaces escalables, performantes y responsivas para sectores Fintech y ecommerce.",
+    "description2": "Complemento el stack con conocimiento en Back-End (Node.js, MongoDB) e integración de React Native para desarrollo mobile.",
+    "description3": "Optimizo el ciclo de desarrollo integrando herramientas de IA (Cursor, Claude) y aplico buenas prácticas desde el diseño UI/UX en Figma hasta el deploy en producción.",
+    "downloadCV": "Descarga CV",
+    "frontendTitle": "Stack Tecnológico",
+    "projectsTitle": "Proyectos Full-Stack"
+  },
+  "experience": {
+    "gire": {
+      "role": "Frontend Developer IA",
+      "location": "CABA, Parque Patricio (Híbrido)",
+      "task1": "Reduje los tiempos de entrega integrando agentes de IA (Cursor, Claude) y automatizando workflows de desarrollo.",
+      "task2": "Desarrollé interfaces escalables para el sector Fintech usando React y TypeScript.",
+      "task3": "Integré servicios mediante Axios y MongoDB para una gestión de datos eficiente.",
+      "task4": "Implementé tests unitarios y de integración con Jest para garantizar la calidad del código."
+    },
+    "modatex": {
+      "role": "Frontend Mobile Developer",
+      "location": "CABA, Flores (Híbrido)",
+      "task1": "Lideré el desarrollo end-to-end de ModapagoApp, una app mobile de pagos y catálogo digital para el sector moda.",
+      "task2": "Diseñé prototipos UI/UX de alta fidelidad en Figma para validar interfaces y acelerar el ciclo de desarrollo.",
+      "task3": "Mejoré el rendimiento general de la app optimizando la lógica de renderizado y el consumo de APIs."
+    },
+    "homedeluxe": {
+      "role": "Software Engineer (Proyecto)",
+      "location": "Buenos Aires (Remoto)",
+      "task1": "Desarrollé una plataforma web de alta fidelidad desde cero utilizando React, TypeScript y Tailwind CSS.",
+      "task2": "Lideré el relevamiento de requisitos y el diseño de interfaces UI/UX en Figma.",
+      "task3": "Gestioné la infraestructura de despliegue en producción mediante FTP, asegurando alta disponibilidad."
+    },
+    "adminrolon": {
+      "role": "Software Engineer (Proyecto)",
+      "location": "Buenos Aires (Remoto)",
+      "task1": "Lideré el desarrollo end-to-end de un sistema de gestión a medida utilizando React, TypeScript y Tailwind CSS.",
+      "task2": "Digitalicé procesos administrativos complejos, optimizando interfaces y flujos de trabajo, desde el diseño en Figma hasta la configuración de dominios."
+    },
+    "bluerabbit": {
+      "role": "Frontend Developer",
+      "location": "CABA, Retiro (Remoto)",
+      "task1": "Desarrollé plataformas web responsivas y escalables utilizando Next.js, Tailwind CSS y TypeScript.",
+      "task2": "Optimicé el SEO y la velocidad de carga implementando Server-Side Rendering (SSR).",
+      "task3": "Gestioné eficientemente el estado de las aplicaciones utilizando TanStack Query."
+    },
+    "techforb": {
+      "role": "Full-Stack Mobile Developer",
+      "location": "EEUU, Florida (Remoto)",
+      "task1": "Desarrollé aplicaciones móviles de E-commerce utilizando React Native Expo.",
+      "task2": "Integré servicios de Firebase para autenticación de usuarios y base de datos en tiempo real (Cloud Firestore).",
+      "task3": "Implementé Redux para la gestión de estado global, mejorando la escalabilidad y los flujos de venta."
+    },
+    "touken": {
+      "role": "Frontend Mobile Developer (Proyecto)",
+      "location": "Chile, Santiago (Remoto)",
+      "task1": "Desarrollé un E-commerce multiplataforma (Web y Mobile) con React, React Native Expo y TypeScript.",
+      "task2": "Aseguré la fluidez visual y técnica entre la versión web y la aplicación nativa utilizando Tailwind CSS.",
+      "task3": "Implementé la lógica transaccional y la gestión de estados globales para un pre-lanzamiento estable."
+    }
+  },
+  "tech": {
+    "frontend": "Front-end",
+    "backend": "Back-end",
+    "tools": "Herramientas"
+  }
+}
