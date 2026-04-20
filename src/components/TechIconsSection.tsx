@@ -6,7 +6,7 @@ export default function TechIconsSection({
 }: TechIconsSectionProps) {
   return (
     <section className="w-full">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-10">
         {categories.map((cat, idx) => (
           <div key={idx} className="flex flex-col">
             <h3 className="text-gray-400 text-[14px] font-semibold uppercase tracking-wider mb-6 border-b border-white/10 pb-3">

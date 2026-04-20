@@ -7,9 +7,9 @@
   },
   "hero": {
     "name": "Gabriel Cornide",
-    "description1": "Semi-Senior (SSR) Front-End Mobile and Web Developer with high performance. Specialized in React, React Native and scalable architectures with TypeScript.",
-    "description2": "I maintain a solid technical level in Backend (Junior+) using Node.js and MongoDB, which allows me to apply a comprehensive vision to development.",
-    "description3": "From UI/UX design in Figma to service integration and AI optimization (Cursor, Claude), I deliver complete and scalable solutions.",
+    "description1": "Semi-Senior Frontend Developer specialized in React, Next.js and TypeScript, with experience building scalable, performant and responsive interfaces for Fintech and ecommerce sectors.",
+    "description2": "I complement the stack with Back-End knowledge (Node.js, MongoDB) and React Native integration for mobile development.",
+    "description3": "I optimize the development cycle by integrating AI tools (Cursor, Claude) and apply best practices from UI/UX design in Figma to production deployment.",
     "downloadCV": "Download CV",
     "frontendTitle": "Technology Stack",
     "projectsTitle": "Full-Stack Projects"
@@ -19,13 +19,16 @@
       "role": "Front-End Developer AI",
       "location": "Buenos Aires, Parque Patricio (Hybrid)",
       "task1": "Reduced delivery times by integrating AI agents (Cursor, Claude) and automating development workflows.",
-      "task2": "Developed scalable interfaces for the Fintech sector using React and TypeScript, integrating services via Axios and MongoDB."
+      "task2": "Developed scalable interfaces for the Fintech sector using React and TypeScript.",
+      "task3": "Integrated services via Axios and MongoDB for efficient data management.",
+      "task4": "Implemented unit and integration tests with Jest to ensure code quality."
     },
     "modatex": {
       "role": "Front-End Mobile Developer",
       "location": "Buenos Aires, Flores (Hybrid)",
-      "task1": "Led end-to-end development of ModapagoApp using React Native Expo, optimizing payment flows and catalogs.",
-      "task2": "Designed high-fidelity UI/UX prototypes in Figma and improved performance by optimizing rendering logic and API consumption."
+      "task1": "Led end-to-end development of ModapagoApp, a mobile app for payments and digital catalog in the fashion sector.",
+      "task2": "Designed high-fidelity UI/UX prototypes in Figma to validate interfaces and accelerate the development cycle.",
+      "task3": "Improved overall app performance by optimizing rendering logic and API consumption."
     },
     "homedeluxe": {
       "role": "Software Engineer (Project)",
@@ -44,7 +47,8 @@
       "role": "Front-End Developer",
       "location": "Buenos Aires, Retiro (Remote)",
       "task1": "Developed responsive and scalable web platforms using Next.js, Tailwind CSS and TypeScript.",
-      "task2": "Optimized SEO and loading speed implementing Server-Side Rendering (SSR) and managed state with TanStack Query."
+      "task2": "Optimized SEO and loading speed implementing Server-Side Rendering (SSR).",
+      "task3": "Efficiently managed application state using TanStack Query."
     },
     "techforb": {
       "role": "Full-Stack Mobile Developer",

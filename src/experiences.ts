@@ -8,6 +8,8 @@ export const experiences = [
     taskKeys: [
       "experience.gire.task1",
       "experience.gire.task2",
+      "experience.gire.task3",
+      "experience.gire.task4",
     ],
   },
   {
@@ -19,6 +21,7 @@ export const experiences = [
     taskKeys: [
       "experience.modatex.task1",
       "experience.modatex.task2",
+      "experience.modatex.task3",
     ],
   },
   {
@@ -53,6 +56,7 @@ export const experiences = [
     taskKeys: [
       "experience.bluerabbit.task1",
       "experience.bluerabbit.task2",
+      "experience.bluerabbit.task3",
     ],
   },
   {

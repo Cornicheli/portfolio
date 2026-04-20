@@ -1,6 +1,55 @@
 import { JobImage } from "@/interfaces";
 
 export const projectImages: JobImage[] = [
+  // Aura
+  {
+    src: "/images/projects/aura-01.png",
+    alt: "aura-01",
+    id: "aura",
+    type: "web",
+  },
+  {
+    src: "/images/projects/aura-02.png",
+    alt: "aura-02",
+    id: "aura",
+    type: "web",
+  },
+  {
+    src: "/images/projects/aura-03.png",
+    alt: "aura-03",
+    id: "aura",
+    type: "web",
+  },
+  {
+    src: "/images/projects/aura-04.png",
+    alt: "aura-04",
+    id: "aura",
+    type: "web",
+  },
+  {
+    src: "/images/projects/aura-05.png",
+    alt: "aura-05",
+    id: "aura",
+    type: "web",
+  },
+  {
+    src: "/images/projects/aura-06.png",
+    alt: "aura-06",
+    id: "aura",
+    type: "web",
+  },
+  {
+    src: "/images/projects/aura-07.png",
+    alt: "aura-07",
+    id: "aura",
+    type: "web",
+  },
+  {
+    src: "/images/projects/aura-08.png",
+    alt: "aura-08",
+    id: "aura",
+    type: "web",
+  },
   {
     src: "/images/projects/gamecenter-web-1.png",
     alt: "gamecenter-web-1",

@@ -53,7 +53,21 @@
       "mcp__plugin_compound-engineering_pw__browser_run_code",
       "Skill(frontend-design:frontend-design)",
       "WebSearch",
-      "mcp__plugin_compound-engineering_pw__browser_wait_for"
+      "mcp__plugin_compound-engineering_pw__browser_wait_for",
+      "Bash(timeout /t 3 /nobreak)",
+      "Bash(npx next lint:*)",
+      "mcp__plugin_compound-engineering_pw__browser_evaluate",
+      "mcp__plugin_compound-engineering_pw__browser_console_messages",
+      "mcp__plugin_playwright_playwright__browser_snapshot",
+      "Bash(timeout 3 curl:*)",
+      "Bash(del test.html)",
+      "Bash(del temp_check.txt)",
+      "Bash(del:*)",
+      "Bash(magick:*)",
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot"
     ]
   }
 }

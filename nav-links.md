@@ -37,7 +37,7 @@
             - /url: https://www.linkedin.com/in/gabriel-cornide-99624923b/
             - img "logo" [ref=e32]
         - link "Descarga CV" [ref=e33] [cursor=pointer]:
-          - /url: /Gabriel-Cornide-FrontEnd-Developer.pdf
+          - /url: /Gabriel_Cornide_FrontEnd_CV.pdf
     - generic [ref=e34]:
       - heading "Experiencia" [level=2] [ref=e35]
       - generic [ref=e37]:
