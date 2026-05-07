@@ -20,6 +20,8 @@ export interface Experience {
   roleKey: string;
   locationKey: string;
   date: string;
+  isCurrent?: boolean;
+  stack: string[];
   taskKeys: string[];
 }
 
