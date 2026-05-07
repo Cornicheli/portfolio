@@ -48,12 +48,15 @@ export default function ChatBot() {
     });
   }, [i18n.language, t]);
 
-  // Auto-scroll on new messages
+  // Auto-scroll on new messages or when suggestions appear
   useEffect(() => {
-    if (isOpen) {
+    if (!isOpen) return;
+    // Small delay so suggestions have time to render before scrolling
+    const t = setTimeout(() => {
       messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [messages, isOpen]);
+    }, 50);
+    return () => clearTimeout(t);
+  }, [messages, showSuggestions, isLoading, isOpen]);
 
   function openChat() {
     setShowPopup(false);
