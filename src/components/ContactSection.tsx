@@ -14,18 +14,45 @@ const GithubIcon = () => (
   </svg>
 );
 
-type FormStatus = "idle" | "submitting" | "success";
+type FormStatus = "idle" | "submitting" | "success" | "error";
 
 export default function ContactSection() {
   const [formStatus, setFormStatus] = useState<FormStatus>("idle");
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData((prev) => ({ ...prev, [e.target.id]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormStatus("submitting");
-    setTimeout(() => {
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        subject: `Nuevo mensaje de ${formData.name} — Portfolio`,
+        botcheck: "",
+      }),
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
       setFormStatus("success");
+      setTimeout(() => {
+        setFormStatus("idle");
+        setFormData({ name: "", email: "", message: "" });
+      }, 3000);
+    } else {
+      setFormStatus("error");
       setTimeout(() => setFormStatus("idle"), 3000);
-    }, 1500);
+    }
   };
 
   return (
@@ -126,6 +153,7 @@ export default function ContactSection() {
                 </h3>
 
                 <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+                  <input type="checkbox" name="botcheck" className="hidden" />
                   {/* Name + Email row */}
                   <div className="grid grid-cols-2 gap-4 form-grid-responsive">
                     {[
@@ -154,6 +182,8 @@ export default function ContactSection() {
                           id={field.id}
                           required
                           placeholder={field.placeholder}
+                          value={formData[field.id as keyof typeof formData]}
+                          onChange={handleChange}
                           className="bg-[var(--bg-card)] border border-[var(--line-strong)] rounded-[10px] py-3 px-4 text-[var(--ink)] text-sm outline-none transition-colors duration-200 w-full focus:border-[var(--ink-4)] placeholder:text-[var(--ink-5)]"
                         />
                       </div>
@@ -173,6 +203,8 @@ export default function ContactSection() {
                       required
                       rows={4}
                       placeholder="Háblame sobre tu proyecto, oferta o idea..."
+                      value={formData.message}
+                      onChange={handleChange}
                       className="bg-[var(--bg-card)] border border-[var(--line-strong)] rounded-[10px] py-3 px-4 text-[var(--ink)] text-sm outline-none resize-none transition-colors duration-200 w-full focus:border-[var(--ink-4)] placeholder:text-[var(--ink-5)]"
                     />
                   </div>
@@ -185,9 +217,11 @@ export default function ContactSection() {
                       "w-full rounded-[10px] py-[15px] px-6 text-sm font-medium flex items-center justify-center gap-2.5 transition-all duration-200",
                       formStatus === "success"
                         ? "bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 cursor-not-allowed"
-                        : formStatus === "submitting"
-                          ? "bg-white/[0.07] border border-[var(--line-strong)] text-[var(--ink)] cursor-not-allowed opacity-70"
-                          : "bg-white/[0.07] border border-[var(--line-strong)] text-[var(--ink)] cursor-pointer hover:bg-white/[0.12]",
+                        : formStatus === "error"
+                          ? "bg-red-500/10 border border-red-500/30 text-red-400 cursor-not-allowed"
+                          : formStatus === "submitting"
+                            ? "bg-white/[0.07] border border-[var(--line-strong)] text-[var(--ink)] cursor-not-allowed opacity-70"
+                            : "bg-white/[0.07] border border-[var(--line-strong)] text-[var(--ink)] cursor-pointer hover:bg-white/[0.12]",
                     ].join(" ")}
                   >
                     {formStatus === "idle" && (
@@ -223,6 +257,11 @@ export default function ContactSection() {
                     {formStatus === "success" && (
                       <>
                         Mensaje enviado <CheckCircle2 size={16} />
+                      </>
+                    )}
+                    {formStatus === "error" && (
+                      <>
+                        Error al enviar. Intenta de nuevo.
                       </>
                     )}
                   </button>
