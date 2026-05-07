@@ -50,3 +50,4 @@ nav-links.md
 *.png
 !public/**/*.png
 !public/**/*.webp
+.playwright-mcp
