@@ -69,5 +69,20 @@
     "frontend": "Front-end",
     "backend": "Back-end",
     "tools": "Tools"
+  },
+  "chatbot": {
+    "title": "Gabriel Cornide",
+    "subtitle": "Portfolio Assistant",
+    "welcome": "Hi! I'm Gabriel's portfolio assistant. Ask me anything about his experience, skills, or projects.",
+    "placeholder": "Ask something...",
+    "ariaLabel": "Open portfolio assistant",
+    "suggestions": [
+      "What's your current role?",
+      "Which projects have you built?",
+      "What's your tech stack?",
+      "Tell me about Aura",
+      "How many years of experience?",
+      "How can I contact you?"
+    ]
   }
 }

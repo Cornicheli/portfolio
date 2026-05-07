@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import FaviconSwitcher from "@/components/FaviconSwitcher";
 import I18nProvider from "@/components/I18nProvider";
+import ChatBotLoader from "@/components/ChatBotLoader";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <I18nProvider>
           <FaviconSwitcher />
           {children}
+          <ChatBotLoader />
         </I18nProvider>
       </body>
     </html>
