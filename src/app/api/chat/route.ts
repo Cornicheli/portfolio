@@ -1,6 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { ChatOpenAI } from "@langchain/openai";
-import { HumanMessage, SystemMessage, AIMessage } from "@langchain/core/messages";
 
 const SYSTEM_PROMPT = `You are Gabriel Cornide's portfolio assistant. Answer questions about Gabriel's professional background concisely (2-4 sentences max). Respond in the same language the user writes in (Spanish or English). Refuse off-topic questions politely.
 
@@ -91,28 +89,32 @@ export async function POST(req: NextRequest) {
 
     const recentMessages = messages.slice(-10);
 
-    const llm = new ChatOpenAI({
-      modelName: "anthropic/claude-3.5-haiku",
-      openAIApiKey: process.env.OPENROUTER_API_KEY,
-      maxTokens: 400,
-      configuration: {
-        baseURL: "https://openrouter.ai/api/v1",
-        defaultHeaders: {
-          "HTTP-Referer": "https://gabriel-cornide.vercel.app",
-          "X-Title": "Gabriel Cornide Portfolio",
-        },
+    const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${process.env.OPENROUTER_API_KEY}`,
+        "Content-Type": "application/json",
+        "HTTP-Referer": "https://gabriel-cornide.vercel.app",
+        "X-Title": "Gabriel Cornide Portfolio",
       },
+      body: JSON.stringify({
+        model: "anthropic/claude-3.5-haiku",
+        max_tokens: 400,
+        messages: [
+          { role: "system", content: SYSTEM_PROMPT },
+          ...recentMessages.map((m) => ({ role: m.role, content: m.content })),
+        ],
+      }),
     });
 
-    const langchainMessages = [
-      new SystemMessage(SYSTEM_PROMPT),
-      ...recentMessages.map((m) =>
-        m.role === "user" ? new HumanMessage(m.content) : new AIMessage(m.content)
-      ),
-    ];
+    if (!res.ok) {
+      const err = await res.text();
+      console.error("OpenRouter error:", err);
+      return NextResponse.json({ error: "Failed to get response" }, { status: 500 });
+    }
 
-    const response = await llm.invoke(langchainMessages);
-    const reply = typeof response.content === "string" ? response.content : JSON.stringify(response.content);
+    const data = await res.json();
+    const reply: string = data.choices?.[0]?.message?.content ?? "No response.";
 
     return NextResponse.json({ reply });
   } catch (error) {
