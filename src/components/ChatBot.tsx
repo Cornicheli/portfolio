@@ -19,7 +19,6 @@ export default function ChatBot() {
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [showSuggestions, setShowSuggestions] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const popupTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -56,7 +55,7 @@ export default function ChatBot() {
       messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
     }, 50);
     return () => clearTimeout(t);
-  }, [messages, showSuggestions, isLoading, isOpen]);
+  }, [messages, isLoading, isOpen]);
 
   function openChat() {
     setShowPopup(false);
@@ -72,7 +71,6 @@ export default function ChatBot() {
 
     setMessages(newMessages);
     setInput("");
-    setShowSuggestions(false);
     setIsLoading(true);
 
     try {
@@ -93,7 +91,6 @@ export default function ChatBot() {
       setMessages((prev) => [...prev, { role: "assistant", content: errMsg }]);
     } finally {
       setIsLoading(false);
-      setShowSuggestions(true);
     }
   }
 
@@ -243,7 +240,7 @@ export default function ChatBot() {
             )}
 
             {/* Suggestion pills */}
-            {showSuggestions && !isLoading && (
+            {messages.length === 1 && !isLoading && (
               <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "4px" }}>
                 {suggestions.map((s) => (
                   <button
