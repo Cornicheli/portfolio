@@ -126,12 +126,12 @@ export default function Home() {
           className="bg-[#0a0a0a] w-full"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0 }}
           variants={fadeInUp}
         >
           <div className="px-6 md:px-8 xl:px-12 pt-16 max-w-[1600px] mx-auto">
             <motion.h2
-              className="text-white text-3xl md:text-4xl xl:text-5xl font-nunito font-bold mb-8"
+              className="text-white text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-nunito font-bold mb-6 sm:mb-8"
               variants={fadeInUp}
             >
               {t("nav.experience")}
@@ -145,7 +145,7 @@ export default function Home() {
           className="w-full bg-[#181818]"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0 }}
           variants={fadeInUp}
         >
           <div className="flex flex-col gap-10 px-6 md:px-8 xl:px-12 py-16 xl:py-20 max-w-[1600px] mx-auto w-full">
@@ -166,7 +166,7 @@ export default function Home() {
           className="w-full bg-[#0a0a0a]"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0 }}
           variants={fadeInUp}
         >
           <div className="flex flex-col gap-10 px-6 md:px-8 xl:px-12 py-16 xl:py-20 max-w-[1600px] mx-auto w-full">
