@@ -2,7 +2,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import { CarouselProps } from "@/interfaces";
+import { CarouselProps } from "@/interfaces/carousel";
 
 export default function CarrouselJobs({
   items,

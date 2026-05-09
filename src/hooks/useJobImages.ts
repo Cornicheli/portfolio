@@ -1,7 +1,7 @@
 "use client";
 import { useState, useCallback } from "react";
-import { JobImage } from "@/interfaces";
-import { ImagenesJobs } from "@/experiencieJobs";
+import { JobImage } from "@/interfaces/media";
+import { ImagenesJobs } from "@/data/experienceJobs";
 
 export function useJobImages() {
   const [imagenesCarrusel, setImagenesCarrusel] =
