@@ -4,6 +4,7 @@ import TimelineExperience from "@/components/sections/TimelineExperience";
 import TechIconsSection from "@/components/sections/TechIconsSection";
 import ProjectCarousel from "@/components/carousels/ProjectCarousel";
 import ContactSection from "@/components/sections/ContactSection";
+import GCMark from "@/components/ui/GCMark";
 import { experiences } from "@/data/experiences";
 import { techCategories } from "@/data/techCategories";
 
@@ -169,7 +170,7 @@ export default function Home() {
                   </div>
 
                   {/* Avatar */}
-                  <div className="w-full aspect-[1.05] bg-[radial-gradient(circle_at_30%_20%,rgba(249,115,22,0.18),transparent_50%),linear-gradient(135deg,#1a1a1a_0%,#0a0a0a_100%)] border border-[var(--line-strong)] rounded-[10px] mb-[18px] flex items-center justify-center overflow-hidden relative">
+                  <div id="hero-avatar" className="w-full aspect-[1.05] bg-[radial-gradient(circle_at_30%_20%,rgba(249,115,22,0.18),transparent_50%),linear-gradient(135deg,#1a1a1a_0%,#0a0a0a_100%)] border border-[var(--line-strong)] rounded-[10px] mb-[18px] flex items-center justify-center overflow-hidden relative">
                     <div
                       style={{
                         position: "absolute",
@@ -321,6 +322,7 @@ export default function Home() {
           <span>Buenos Aires, AR · Crafted with care</span>
         </div>
       </footer>
+      <GCMark />
     </>
   );
 }
