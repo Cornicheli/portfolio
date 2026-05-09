@@ -6,7 +6,10 @@ import I18nProvider from "@/components/providers/I18nProvider";
 import ChatBotLoader from "@/components/chatbot/ChatBotLoader";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
-const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 const instrumentSerif = Instrument_Serif({
   variable: "--font-instrument-serif",
   subsets: ["latin"],
@@ -20,7 +23,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: "Gabriel Cornide — Frontend Engineer",
   description:
-    "Desarrollador Frontend Semi-Senior especializado en React, Next.js y TypeScript. 3+ años de experiencia en 7 empresas. Buenos Aires, AR.",
+    "Desarrollador Frontend Semi-Senior especializado en React, Next.js y TypeScript. 3+ años de experiencia en 4 empresas. Buenos Aires, AR.",
   keywords: [
     "Frontend Developer",
     "React",
@@ -56,13 +59,17 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es">
       <head>
         <link rel="icon" href="/faviconBlack.ico" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} antialiased`}
+      >
         <I18nProvider>
           <FaviconSwitcher />
           {children}

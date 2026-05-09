@@ -263,7 +263,7 @@ export default function Home() {
                   Trayectoria <em>profesional.</em>
                 </h2>
                 <p className="section-sub">
-                  Siete empresas. Fintech, retail y e-commerce. Producción
+                  Cuatro empresas. Fintech, retail y e-commerce. Producción
                   siempre, no demos.
                 </p>
               </div>
