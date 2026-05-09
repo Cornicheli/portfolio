@@ -1,4 +1,4 @@
-import { JobImage } from "@/interfaces";
+import { JobImage } from "@/interfaces/media";
 
 export const ImagenesJobs: JobImage[] = [
   {

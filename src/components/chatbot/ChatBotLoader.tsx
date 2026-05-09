@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 
-const ChatBot = dynamic(() => import("@/components/ChatBot"), { ssr: false });
+const ChatBot = dynamic(() => import("@/components/chatbot/ChatBot"), { ssr: false });
 
 export default function ChatBotLoader() {
   return <ChatBot />;

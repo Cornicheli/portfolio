@@ -2,9 +2,9 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import { projectImages } from "@/projectImages";
+import { projectImages } from "@/data/projectImages";
 
-const Carousel = dynamic(() => import("@/components/Carousel"), {
+const Carousel = dynamic(() => import("@/components/carousels/Carousel"), {
   loading: () => (
     <div className="h-[250px] lg:h-[350px] flex items-center justify-center">
       <div className="animate-pulse text-white">Cargando proyectos...</div>

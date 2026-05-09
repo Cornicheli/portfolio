@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { projects } from "@/projects";
+import { projects } from "@/data/projects";
 
 export default function ProjectCarousel() {
   const [slidesPerView, setSlidesPerView] = useState(3);

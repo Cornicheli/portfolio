@@ -1,11 +1,11 @@
 "use client";
-import Header from "@/components/Header";
-import TimelineExperience from "@/components/TimelineExperience";
-import TechIconsSection from "@/components/TechIconsSection";
-import ProjectCarousel from "@/components/ProjectCarousel";
-import ContactSection from "@/components/ContactSection";
-import { experiences } from "@/experiences";
-import { techCategories } from "@/techCategories";
+import Header from "@/components/layout/Header";
+import TimelineExperience from "@/components/sections/TimelineExperience";
+import TechIconsSection from "@/components/sections/TechIconsSection";
+import ProjectCarousel from "@/components/carousels/ProjectCarousel";
+import ContactSection from "@/components/sections/ContactSection";
+import { experiences } from "@/data/experiences";
+import { techCategories } from "@/data/techCategories";
 
 export default function Home() {
   return (

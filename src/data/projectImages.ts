@@ -1,4 +1,4 @@
-import { JobImage } from "@/interfaces";
+import { JobImage } from "@/interfaces/media";
 
 export const projectImages: JobImage[] = [
   // Aura
@@ -92,7 +92,7 @@ export const projectImages: JobImage[] = [
     id: "gamecenter",
     type: "web",
   },
-  // MyTinerary Web (guion)
+  // MyTinerary Web
   {
     src: "/images/projects/my-tinerary-1.png",
     alt: "my-tinerary-1",
