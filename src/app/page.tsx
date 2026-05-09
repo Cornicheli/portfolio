@@ -4,7 +4,6 @@ import TimelineExperience from "@/components/sections/TimelineExperience";
 import TechIconsSection from "@/components/sections/TechIconsSection";
 import ProjectCarousel from "@/components/carousels/ProjectCarousel";
 import ContactSection from "@/components/sections/ContactSection";
-import GCMark from "@/components/ui/GCMark";
 import { experiences } from "@/data/experiences";
 import { techCategories } from "@/data/techCategories";
 
@@ -322,7 +321,6 @@ export default function Home() {
           <span>Buenos Aires, AR · Crafted with care</span>
         </div>
       </footer>
-      <GCMark />
     </>
   );
 }
