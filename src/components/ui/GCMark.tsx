@@ -31,7 +31,7 @@ export default function GCMark() {
 
   return (
     <div
-      className="fixed bottom-8 right-8 z-50 pointer-events-none select-none"
+      className="fixed bottom-8 right-20 z-50 pointer-events-none select-none"
       style={{
         color: isActive ? "var(--ink)" : "var(--accent)",
         transition: "color 0.4s ease",
