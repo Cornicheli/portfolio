@@ -223,7 +223,7 @@ export default function Home() {
             <div className="mt-20 grid grid-cols-4 border border-[var(--line)] bg-[var(--bg-elev)] rounded-xl overflow-hidden stats-grid-responsive">
               {[
                 { num: "3", suffix: "+", label: "Años shipping" },
-                { num: "7", suffix: "", label: "Empresas" },
+                { num: "4", suffix: "", label: "Empresas" },
                 { num: "12", suffix: "", label: "Apps en producción" },
                 {
                   num: "2",
