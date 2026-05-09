@@ -1,36 +1,60 @@
 "use client";
 import { useEffect } from "react";
 
+function createGCFavicon(color: string): string {
+  const canvas = document.createElement("canvas");
+  canvas.width = 64;
+  canvas.height = 64;
+  const ctx = canvas.getContext("2d")!;
+
+  // Background transparent
+  ctx.clearRect(0, 0, 64, 64);
+
+  // Draw "gc"
+  ctx.fillStyle = color;
+  ctx.font = "italic 700 44px Georgia, serif";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillText("gc", 32, 34);
+
+  return canvas.toDataURL("image/png");
+}
+
+function setFaviconHref(href: string) {
+  let favicon = document.querySelector("link[rel='icon']") as HTMLLinkElement | null;
+  if (!favicon) {
+    favicon = document.createElement("link") as HTMLLinkElement;
+    favicon.rel = "icon";
+    document.head.appendChild(favicon);
+  }
+  favicon.href = href;
+}
+
 export default function FaviconSwitcher() {
   useEffect(() => {
-    const originalFavicon = "/faviconBlack.ico";
-    const redFavicon = "/faviconRed.ico";
+    const BLACK = "#0a0a0a";
+    const ORANGE = "#f97316";
 
     let heroVisible = true;
     let windowFocused = true;
 
-    const setFavicon = () => {
-      let favicon = document.querySelector(
-        "link[rel='icon']"
-      ) as HTMLLinkElement | null;
-      if (!favicon) {
-        favicon = document.createElement("link") as HTMLLinkElement;
-        favicon.rel = "icon";
-        document.head.appendChild(favicon);
-      }
+    const update = () => {
       const isActive = heroVisible && windowFocused && !document.hidden;
-      favicon.href = isActive ? originalFavicon : redFavicon;
+      setFaviconHref(createGCFavicon(isActive ? BLACK : ORANGE));
     };
 
-    const handleVisibilityChange = () => setFavicon();
-    const handleFocus = () => { windowFocused = true; setFavicon(); };
-    const handleBlur = () => { windowFocused = false; setFavicon(); };
+    // Initial render
+    update();
+
+    const handleVisibilityChange = () => update();
+    const handleFocus = () => { windowFocused = true; update(); };
+    const handleBlur = () => { windowFocused = false; update(); };
 
     const target = document.getElementById("hero-avatar");
     let observer: IntersectionObserver | null = null;
     if (target) {
       observer = new IntersectionObserver(
-        ([entry]) => { heroVisible = entry.isIntersecting; setFavicon(); },
+        ([entry]) => { heroVisible = entry.isIntersecting; update(); },
         { threshold: 0.1 }
       );
       observer.observe(target);
