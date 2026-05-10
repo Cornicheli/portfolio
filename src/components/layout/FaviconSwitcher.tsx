@@ -1,5 +1,6 @@
 "use client";
 import { useEffect } from "react";
+import { useTheme } from "@/components/providers/ThemeProvider";
 
 function createGCFavicon(color: string): string {
   const canvas = document.createElement("canvas");
@@ -31,8 +32,10 @@ function setFaviconHref(href: string) {
 }
 
 export default function FaviconSwitcher() {
+  const { theme } = useTheme();
+
   useEffect(() => {
-    const BLACK = "#0a0a0a";
+    const activeColor = theme === "dark" ? "#fafafa" : "#1a1714";
     const ORANGE = "#f97316";
 
     let heroVisible = true;
@@ -40,7 +43,7 @@ export default function FaviconSwitcher() {
 
     const update = () => {
       const isActive = heroVisible && windowFocused && !document.hidden;
-      setFaviconHref(createGCFavicon(isActive ? BLACK : ORANGE));
+      setFaviconHref(createGCFavicon(isActive ? activeColor : ORANGE));
     };
 
     // Initial render
@@ -70,7 +73,7 @@ export default function FaviconSwitcher() {
       window.removeEventListener("blur", handleBlur);
       observer?.disconnect();
     };
-  }, []);
+  }, [theme]);
 
   return null;
 }

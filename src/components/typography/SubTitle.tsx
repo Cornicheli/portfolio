@@ -7,7 +7,7 @@ export default function SubTitle({
 }) {
   return (
     <h2
-      className={`text-white text-lg md:text-xl font-nunito font-semibold cursor-pointer ${className}`}
+      className={`text-[var(--ink)] text-lg md:text-xl font-nunito font-semibold cursor-pointer ${className}`}
     >
       {children}
     </h2>
