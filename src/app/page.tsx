@@ -184,7 +184,7 @@ export default function Home() {
                           "radial-gradient(circle at center, black 20%, transparent 70%)",
                       }}
                     />
-                    <span className="font-serif italic text-[120px] leading-none text-[var(--ink)] relative z-[1] tracking-[-0.04em]">
+                    <span className="font-serif italic text-[120px] leading-none text-[#fafafa] relative z-[1] tracking-[-0.04em]">
                       gc
                     </span>
                   </div>
