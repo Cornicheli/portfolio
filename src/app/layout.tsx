@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import FaviconSwitcher from "@/components/layout/FaviconSwitcher";
 import I18nProvider from "@/components/providers/I18nProvider";
+import ThemeProvider from "@/components/providers/ThemeProvider";
 import ChatBotLoader from "@/components/chatbot/ChatBotLoader";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -64,17 +65,16 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es">
-      <head>
-        <link rel="icon" href="/faviconBlack.ico" />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} antialiased`}
       >
-        <I18nProvider>
-          <FaviconSwitcher />
-          {children}
-          <ChatBotLoader />
-        </I18nProvider>
+        <ThemeProvider>
+          <I18nProvider>
+            <FaviconSwitcher />
+            {children}
+            <ChatBotLoader />
+          </I18nProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

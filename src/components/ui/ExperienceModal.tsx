@@ -63,7 +63,7 @@ export default function ExperienceModal({ experience, role, location, onClose }:
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4"
-      style={{ backdropFilter: "blur(10px)", background: "rgba(10,10,10,0.82)" }}
+      style={{ backdropFilter: "blur(10px)", background: "var(--bg-overlay)" }}
       onClick={onClose}
     >
       <div
@@ -140,7 +140,7 @@ export default function ExperienceModal({ experience, role, location, onClose }:
                 onClick={prev}
                 className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-xl flex items-center justify-center z-10 transition-all duration-150"
                 style={{
-                  background: "rgba(17,17,17,0.85)",
+                  background: "var(--bg-nav-btn)",
                   border: "1px solid var(--line-strong)",
                   color: "var(--ink-3)",
                   backdropFilter: "blur(4px)",
@@ -164,7 +164,7 @@ export default function ExperienceModal({ experience, role, location, onClose }:
                 onClick={next}
                 className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-xl flex items-center justify-center z-10 transition-all duration-150"
                 style={{
-                  background: "rgba(17,17,17,0.85)",
+                  background: "var(--bg-nav-btn)",
                   border: "1px solid var(--line-strong)",
                   color: "var(--ink-3)",
                   backdropFilter: "blur(4px)",

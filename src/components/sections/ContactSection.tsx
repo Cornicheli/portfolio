@@ -67,7 +67,7 @@ export default function ContactSection() {
         </div>
 
         {/* Main card */}
-        <div className="relative border border-[var(--line-strong)] bg-[rgba(10,10,10,0.8)] backdrop-blur-xl rounded-[32px] p-20 overflow-hidden contact-card-responsive">
+        <div className="relative border border-[var(--line-strong)] bg-[var(--bg-blur-contact)] backdrop-blur-xl rounded-[32px] p-20 overflow-hidden contact-card-responsive">
           {/* Background glow */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-[radial-gradient(ellipse,rgba(249,115,22,0.05)_0%,transparent_70%)] pointer-events-none z-0" />
 
@@ -136,7 +136,7 @@ export default function ContactSection() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={s.label}
-                      className="w-[42px] h-[42px] rounded-full border border-[var(--line-strong)] bg-transparent flex items-center justify-center text-[var(--ink-4)] transition-all duration-200 hover:bg-white/[0.06] hover:text-[var(--ink)] hover:border-[var(--ink-5)]"
+                      className="w-[42px] h-[42px] rounded-full border border-[var(--line-strong)] bg-transparent flex items-center justify-center text-[var(--ink-4)] transition-all duration-200 hover:bg-[var(--bg-hover)] hover:text-[var(--ink)] hover:border-[var(--ink-5)]"
                     >
                       {s.icon}
                     </a>
@@ -220,8 +220,8 @@ export default function ContactSection() {
                         : formStatus === "error"
                           ? "bg-red-500/10 border border-red-500/30 text-red-400 cursor-not-allowed"
                           : formStatus === "submitting"
-                            ? "bg-white/[0.07] border border-[var(--line-strong)] text-[var(--ink)] cursor-not-allowed opacity-70"
-                            : "bg-white/[0.07] border border-[var(--line-strong)] text-[var(--ink)] cursor-pointer hover:bg-white/[0.12]",
+                            ? "bg-[var(--bg-hover)] border border-[var(--line-strong)] text-[var(--ink)] cursor-not-allowed opacity-70"
+                            : "bg-[var(--bg-hover)] border border-[var(--line-strong)] text-[var(--ink)] cursor-pointer hover:bg-[var(--bg-card)]",
                     ].join(" ")}
                   >
                     {formStatus === "idle" && (

@@ -16,13 +16,46 @@
   --accent: #f97316;
   --accent-soft: rgba(249, 115, 22, 0.12);
   --accent-line: rgba(249, 115, 22, 0.28);
+  --bg-blur-header:   rgba(10, 10, 10, 0.75);
+  --bg-blur-contact:  rgba(10, 10, 10, 0.80);
+  --bg-blur-panel:    rgba(20, 20, 20, 0.96);
+  --bg-overlay:       rgba(10, 10, 10, 0.82);
+  --bg-nav-btn:       rgba(17, 17, 17, 0.85);
+  --bg-overlay-hover: rgba(10, 10, 10, 0.45);
   --font-geist-sans: 'Geist', sans-serif;
   --font-geist-mono: 'Geist Mono', monospace;
 }
 
+html[data-theme="light"] {
+  --bg:               #f7f5f2;
+  --bg-elev:          #ffffff;
+  --bg-card:          #f0ede8;
+  --bg-hover:         #e8e4df;
+  --line:             #e2ddd8;
+  --line-strong:      #ccc7c0;
+  --ink:              #1a1714;
+  --ink-2:            #3d3530;
+  --ink-3:            #6b6460;
+  --ink-4:            #8f8880;
+  --ink-5:            #b0a89f;
+  --accent:           #f97316;
+  --accent-soft:      rgba(249, 115, 22, 0.10);
+  --accent-line:      rgba(249, 115, 22, 0.35);
+  --bg-blur-header:   rgba(247, 245, 242, 0.80);
+  --bg-blur-contact:  rgba(247, 245, 242, 0.85);
+  --bg-blur-panel:    rgba(255, 255, 255, 0.96);
+  --bg-overlay:       rgba(20, 15, 10, 0.60);
+  --bg-nav-btn:       rgba(247, 245, 242, 0.90);
+  --bg-overlay-hover: rgba(20, 15, 10, 0.35);
+}
+
+html[data-theme="light"] body::before {
+  opacity: 0.12;
+}
+
 @layer base {
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; transition: background-color 0.2s ease, color 0.2s ease; }
   html, body {
     margin: 0; padding: 0;
     background: var(--bg);

@@ -63,7 +63,7 @@ export default function ProjectCarousel() {
                   />
                   {/* Hover overlay hint */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-                    style={{ background: "rgba(10,10,10,0.45)" }}>
+                    style={{ background: "var(--bg-overlay-hover)" }}>
                     <span className="font-mono text-[11px] tracking-[0.1em] uppercase flex items-center gap-2"
                       style={{ color: "var(--ink-2)" }}>
                       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
