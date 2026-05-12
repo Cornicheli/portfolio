@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { ArrowRight, Download, Send, CheckCircle2 } from "lucide-react";
 
 const LinkedinIcon = () => (
@@ -17,6 +18,7 @@ const GithubIcon = () => (
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
 export default function ContactSection() {
+  const { t } = useTranslation("common");
   const [formStatus, setFormStatus] = useState<FormStatus>("idle");
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
@@ -62,7 +64,7 @@ export default function ContactSection() {
         <div className="flex justify-center mb-16">
           <span className="section-label">
             <span className="dot" />
-            04 / Contacto
+            {t('sections.contactLabel')}
           </span>
         </div>
 
@@ -75,22 +77,21 @@ export default function ContactSection() {
             {/* ── Left column ── */}
             <div className="flex flex-col justify-center">
               <h2 className="font-serif font-normal text-[clamp(36px,4vw,58px)] leading-[1.1] tracking-[-0.03em] text-[var(--ink)] mb-7">
-                En busca de nuevas experiencias. <br />
+                {t('contact.heading')} <br />
                 <em className="italic text-[var(--ink-3)]">
-                  Abierto a aprendizaje continuo.
+                  {t('contact.headingEm')}
                 </em>
               </h2>
 
               <p className="text-[17px] leading-[1.65] text-[var(--ink-4)] mb-2.5 max-w-[440px]">
-                Abierto a roles{" "}
+                {t('contact.descriptionPre')}{" "}
                 <strong className="text-[var(--ink-2)] font-medium">
-                  Semi-Sr / Sr Frontend
+                  {t('contact.descriptionStrong')}
                 </strong>
-                . Remoto o Buenos Aires. Especializado en React, Next.js,
-                Typescript e IA.
+                {t('contact.descriptionPost')}
               </p>
               <p className="text-[15px] text-[var(--ink-4)] mb-10">
-                Respuesta garantizada en menos de 24 horas.
+                {t('contact.responseTime')}
               </p>
 
               {/* CTAs */}
@@ -107,7 +108,7 @@ export default function ContactSection() {
                   download
                   className="bg-transparent text-[var(--ink-2)] border border-[var(--line-strong)] py-[14px] px-[22px] text-sm font-medium rounded-[10px] inline-flex items-center gap-2.5 no-underline transition duration-200 whitespace-nowrap hover:border-[var(--ink-4)] hover:text-[var(--ink)]"
                 >
-                  Descargar CV
+                  {t('contact.downloadCV')}
                   <Download size={16} />
                 </a>
               </div>
@@ -115,7 +116,7 @@ export default function ContactSection() {
               {/* Socials */}
               <div className="pt-7 border-t border-[var(--line)]">
                 <p className="font-mono text-[10px] text-[var(--ink-5)] tracking-[0.2em] uppercase mb-4">
-                  También en
+                  {t('contact.alsoOn')}
                 </p>
                 <div className="flex gap-2.5">
                   {[
@@ -149,7 +150,7 @@ export default function ContactSection() {
             <div>
               <div className="bg-[var(--bg-elev)] border border-[var(--line)] rounded-3xl p-10">
                 <h3 className="text-[22px] font-medium text-[var(--ink)] mb-8">
-                  Envíame un mensaje
+                  {t('contact.formTitle')}
                 </h3>
 
                 <form onSubmit={handleSubmit} className="flex flex-col gap-5">
@@ -159,15 +160,15 @@ export default function ContactSection() {
                     {[
                       {
                         id: "name",
-                        label: "Nombre",
+                        label: t('contact.labelName'),
                         type: "text",
-                        placeholder: "Tu nombre",
+                        placeholder: t('contact.placeholderName'),
                       },
                       {
                         id: "email",
-                        label: "Email",
+                        label: t('contact.labelEmail'),
                         type: "email",
-                        placeholder: "tu@email.com",
+                        placeholder: t('contact.placeholderEmail'),
                       },
                     ].map((field) => (
                       <div key={field.id} className="flex flex-col gap-2">
@@ -196,13 +197,13 @@ export default function ContactSection() {
                       htmlFor="message"
                       className="font-mono text-[11px] text-[var(--ink-4)] tracking-[0.06em] uppercase"
                     >
-                      Mensaje
+                      {t('contact.labelMessage')}
                     </label>
                     <textarea
                       id="message"
                       required
                       rows={4}
-                      placeholder="Háblame sobre tu proyecto, oferta o idea..."
+                      placeholder={t('contact.placeholderMessage')}
                       value={formData.message}
                       onChange={handleChange}
                       className="bg-[var(--bg-card)] border border-[var(--line-strong)] rounded-[10px] py-3 px-4 text-[var(--ink)] text-sm outline-none resize-none transition-colors duration-200 w-full focus:border-[var(--ink-4)] placeholder:text-[var(--ink-5)]"
@@ -226,7 +227,7 @@ export default function ContactSection() {
                   >
                     {formStatus === "idle" && (
                       <>
-                        Enviar mensaje <Send size={16} />
+                        {t('contact.send')} <Send size={16} />
                       </>
                     )}
                     {formStatus === "submitting" && (
@@ -251,17 +252,17 @@ export default function ContactSection() {
                             d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                           />
                         </svg>
-                        Enviando...
+                        {t('contact.sending')}
                       </>
                     )}
                     {formStatus === "success" && (
                       <>
-                        Mensaje enviado <CheckCircle2 size={16} />
+                        {t('contact.sent')} <CheckCircle2 size={16} />
                       </>
                     )}
                     {formStatus === "error" && (
                       <>
-                        Error al enviar. Intenta de nuevo.
+                        {t('contact.error')}
                       </>
                     )}
                   </button>

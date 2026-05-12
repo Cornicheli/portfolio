@@ -1,4 +1,5 @@
 "use client";
+import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import Image from "next/image";
@@ -9,6 +10,7 @@ import { projects, Project } from "@/data/projects";
 import ProjectModal from "@/components/ui/ProjectModal";
 
 export default function ProjectCarousel() {
+  const { t } = useTranslation("common");
   const [slidesPerView, setSlidesPerView] = useState(3);
   const [mounted, setMounted] = useState(false);
   const [selected, setSelected] = useState<Project | null>(null);
@@ -69,7 +71,7 @@ export default function ProjectCarousel() {
                       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
                       </svg>
-                      Ver galería
+                      {t('sections.viewGallery')}
                     </span>
                   </div>
                 </div>
@@ -83,7 +85,7 @@ export default function ProjectCarousel() {
                     {project.title}
                   </h3>
                   <p className="text-[var(--ink-3)] text-[13.5px] leading-[1.55] mb-4 flex-1">
-                    {project.desc}
+                    {t(project.descKey)}
                   </p>
                   <div className="flex flex-wrap gap-[5px]">
                     {project.stack.map((s, i) => (
