@@ -115,7 +115,7 @@ export default function Header() {
             {theme === "dark" ? <SunIcon /> : <MoonIcon />}
           </button>
           <a
-            href="/Gabriel_Cornide_Frontend_CV.pdf"
+            href={currentLang === 'en' ? '/cvEn/Gabriel_Cornide_Frontend_CV.pdf' : '/cvEs/Gabriel_Cornide_Frontend_CV.pdf'}
             download
             className="header-cv-btn bg-[var(--ink)] text-[var(--bg)] py-2 px-4 text-[13px] font-medium rounded-[6px] flex items-center gap-2 whitespace-nowrap"
           >

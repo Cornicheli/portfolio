@@ -18,7 +18,8 @@ const GithubIcon = () => (
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
 export default function ContactSection() {
-  const { t } = useTranslation("common");
+  const { t, i18n } = useTranslation("common");
+  const cvHref = i18n.language === 'en' ? '/cvEn/Gabriel_Cornide_Frontend_CV.pdf' : '/cvEs/Gabriel_Cornide_Frontend_CV.pdf';
   const [formStatus, setFormStatus] = useState<FormStatus>("idle");
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
@@ -104,7 +105,7 @@ export default function ContactSection() {
                   <ArrowRight size={16} />
                 </a>
                 <a
-                  href="/Gabriel_Cornide_Frontend_CV.pdf"
+                  href={cvHref}
                   download
                   className="bg-transparent text-[var(--ink-2)] border border-[var(--line-strong)] py-[14px] px-[22px] text-sm font-medium rounded-[10px] inline-flex items-center gap-2.5 no-underline transition duration-200 whitespace-nowrap hover:border-[var(--ink-4)] hover:text-[var(--ink)]"
                 >
