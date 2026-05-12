@@ -64,7 +64,7 @@ export default function Header() {
     { id: 'experiencia', label: t('nav.experience') },
     { id: 'stack', label: t('nav.technologies') },
     { id: 'proyectos', label: t('nav.projects') },
-    { id: 'contacto', label: 'Contacto' },
+    { id: 'contacto', label: t('sections.contactNav') },
   ];
 
   return (
@@ -119,7 +119,7 @@ export default function Header() {
             download
             className="header-cv-btn bg-[var(--ink)] text-[var(--bg)] py-2 px-4 text-[13px] font-medium rounded-[6px] flex items-center gap-2 whitespace-nowrap"
           >
-            <span className="header-cv-text">Descargar CV</span>
+            <span className="header-cv-text">{t('sections.downloadCV')}</span>
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4"><path d="M12 4v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg>
           </a>
         </div>

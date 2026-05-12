@@ -61,7 +61,7 @@ export default function TimelineExperience({ experiences }: Props) {
                   <div />
                   <div>
                     <span className="font-mono text-[13px] tracking-[0.06em] text-[var(--ink-3)]">
-                      Relación de dependencia
+                      {t('sections.employed')}
                     </span>
                   </div>
                 </div>
@@ -71,7 +71,7 @@ export default function TimelineExperience({ experiences }: Props) {
                   <div />
                   <div>
                     <span className="font-mono text-[13px] tracking-[0.06em] text-[var(--ink-3)]">
-                      Freelance
+                      {t('sections.freelance')}
                     </span>
                   </div>
                 </div>
@@ -167,7 +167,7 @@ export default function TimelineExperience({ experiences }: Props) {
                         <rect x="3" y="3" width="18" height="18" rx="2" />
                         <path d="M3 9h18M9 21V9" />
                       </svg>
-                      Ver fotos
+                      {t('sections.viewPhotos')}
                     </div>
                   ) : (
                     <span style={{ color: "var(--ink-5)", fontSize: 20 }}>

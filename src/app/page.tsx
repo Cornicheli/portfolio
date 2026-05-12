@@ -1,4 +1,5 @@
 "use client";
+import { useTranslation } from "react-i18next";
 import Header from "@/components/layout/Header";
 import TimelineExperience from "@/components/sections/TimelineExperience";
 import TechIconsSection from "@/components/sections/TechIconsSection";
@@ -8,6 +9,7 @@ import { experiences } from "@/data/experiences";
 import { techCategories } from "@/data/techCategories";
 
 export default function Home() {
+  const { t } = useTranslation("common");
   return (
     <>
       <Header />
@@ -27,7 +29,7 @@ export default function Home() {
                 {/* Availability badge */}
                 <div className="inline-flex items-center gap-2 py-1.5 px-3 bg-[var(--bg-elev)] border border-[var(--line-strong)] rounded-full font-mono text-[11px] text-[var(--ink-3)] tracking-[0.04em] mb-7">
                   <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-[pulse-green_2s_infinite]" />
-                  Disponible para nuevas oportunidades · Buenos Aires, AR
+                  {t('hero.available')}
                 </div>
 
                 <h1 className="font-serif font-normal leading-[0.95] tracking-[-0.04em] mb-7 text-[clamp(60px,8vw,104px)] text-[var(--ink)]">
@@ -37,23 +39,22 @@ export default function Home() {
                 </h1>
 
                 <p className="text-[18px] leading-[1.6] text-[var(--ink-2)] max-w-[560px] mb-[18px]">
-                  Desarrollador{" "}
+                  {t('hero.para1Pre')}{t('hero.para1Pre') ? ' ' : ''}
                   <strong className="text-[var(--ink)] font-medium">
-                    Frontend Semi-Senior
-                  </strong>{" "}
-                  especializado en React, Next.js y TypeScript, construyendo
-                  interfaces escalables, performantes y responsivas.
+                    {t('hero.para1Strong')}
+                  </strong>
+                  {t('hero.para1Post')}
                 </p>
                 <p className="text-[15px] leading-[1.65] text-[var(--ink-4)] max-w-[540px] mb-9">
-                  Complemento el stack con conocimiento en{" "}
+                  {t('hero.para2Pre')}
                   <strong className="text-[var(--ink-2)] font-medium">
-                    Back-End
-                  </strong>{" "}
-                  (Node.js, MongoDB) e integración de{" "}
+                    {t('hero.para2Strong1')}
+                  </strong>
+                  {t('hero.para2Mid')}
                   <strong className="text-[var(--ink-2)] font-medium">
-                    React Native
-                  </strong>{" "}
-                  para mobile.
+                    {t('hero.para2Strong2')}
+                  </strong>
+                  {t('hero.para2Post')}
                 </p>
 
                 <div className="flex gap-2.5 items-center mb-12 flex-wrap">
@@ -67,7 +68,7 @@ export default function Home() {
                     }}
                     className="bg-[var(--ink)] text-[var(--bg)] py-[14px] px-[22px] text-sm font-medium rounded-lg inline-flex items-center gap-2.5 no-underline"
                   >
-                    Ver proyectos
+                    {t('hero.viewProjects')}
                     <svg
                       width="14"
                       height="14"
@@ -89,7 +90,7 @@ export default function Home() {
                     }}
                     className="bg-transparent text-[var(--ink-2)] border border-[var(--line-strong)] py-[14px] px-[22px] text-sm rounded-lg no-underline"
                   >
-                    Contactar
+                    {t('hero.contact')}
                   </a>
                 </div>
 
@@ -222,14 +223,10 @@ export default function Home() {
             {/* Stats */}
             <div className="mt-20 grid grid-cols-4 border border-[var(--line)] bg-[var(--bg-elev)] rounded-xl overflow-hidden stats-grid-responsive">
               {[
-                { num: "3", suffix: "+", label: "Años shipping" },
-                { num: "4", suffix: "", label: "Empresas" },
-                { num: "12", suffix: "", label: "Apps en producción" },
-                {
-                  num: "2",
-                  suffix: "",
-                  label: "Industrias · Fintech / Retail",
-                },
+                { num: "3", suffix: "+", label: t('hero.statsYears') },
+                { num: "4", suffix: "", label: t('hero.statsCompanies') },
+                { num: "12", suffix: "", label: t('hero.statsApps') },
+                { num: "2", suffix: "", label: t('hero.statsIndustries') },
               ].map((stat, i) => (
                 <div
                   key={i}
@@ -257,18 +254,17 @@ export default function Home() {
               <div>
                 <span className="section-label">
                   <span className="dot" />
-                  &nbsp;01 / Experiencia
+                  &nbsp;{t('sections.experienceLabel')}
                 </span>
                 <h2 className="section-title">
-                  Trayectoria <em>profesional.</em>
+                  {t('sections.experienceTitle')} <em>{t('sections.experienceTitleEm')}</em>
                 </h2>
                 <p className="section-sub">
-                  Cuatro empresas. Fintech, retail y e-commerce. Producción
-                  siempre, no demos.
+                  {t('sections.experienceSub')}
                 </p>
               </div>
               <div className="font-mono text-[11px] text-[var(--ink-4)] tracking-[0.06em]">
-                2023 → presente · 7 roles
+                {t('sections.experienceRange')}
               </div>
             </div>
             <TimelineExperience experiences={experiences} />
@@ -280,14 +276,13 @@ export default function Home() {
           <div className="container">
             <span className="section-label">
               <span className="dot" />
-              &nbsp;02 / Stack
+              &nbsp;{t('sections.stackLabel')}
             </span>
             <h2 className="section-title">
-              Stack <em>tecnológico.</em>
+              {t('sections.stackTitle')} <em>{t('sections.stackTitleEm')}</em>
             </h2>
             <p className="section-sub">
-              Herramientas elegidas con propósito. Probadas en producción, no
-              checklist de CV.
+              {t('sections.stackSub')}
             </p>
             <TechIconsSection categories={techCategories} />
           </div>
@@ -298,14 +293,13 @@ export default function Home() {
           <div className="container">
             <span className="section-label">
               <span className="dot" />
-              &nbsp;03 / Proyectos
+              &nbsp;{t('sections.projectsLabel')}
             </span>
             <h2 className="section-title">
-              Proyectos <em>full-stack.</em>
+              {t('sections.projectsTitle')} <em>{t('sections.projectsTitleEm')}</em>
             </h2>
             <p className="section-sub">
-              Construcciones recientes. Diseño + ingeniería de extremo a
-              extremo.
+              {t('sections.projectsSub')}
             </p>
             <ProjectCarousel />
           </div>

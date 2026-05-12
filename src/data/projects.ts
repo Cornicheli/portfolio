@@ -4,6 +4,7 @@ export interface Project {
   title: string;
   url: string;
   desc: string;
+  descKey: string;
   stack: string[];
   year: string;
   role: string;
@@ -19,6 +20,7 @@ export const projects: Project[] = [
     title: "AdTech CRM",
     url: "cms-dooh.netlify.app",
     desc: "CRM para gestión de campañas DOOH — dashboard analítico y monitoreo de pantallas activas en tiempo real.",
+    descKey: "projects.adtech",
     stack: ["Angular 21", "TypeScript", "Tailwind"],
     year: "2025",
     role: "Full-Stack",
@@ -40,6 +42,7 @@ export const projects: Project[] = [
     title: "Aura",
     url: "aura-web.vercel.app",
     desc: "Web3 de inversión blockchain — activos digitales, portafolio en tiempo real y agente IA inversor 24/7 que informa, recomienda y calcula rendimientos.",
+    descKey: "projects.aura",
     stack: ["React", "TypeScript", "Tailwind", "LangChain", "OpenRouter"],
     year: "2024",
     role: "Full-Stack",
@@ -56,6 +59,7 @@ export const projects: Project[] = [
     title: "MyTinerary",
     url: "mytinerary.vercel.app",
     desc: "App de itinerarios de viaje — exploración de ciudades, actividades y rutas personalizadas.",
+    descKey: "projects.mytinerary",
     stack: ["React", "Node.js", "MongoDB", "Redux"],
     year: "2023",
     role: "Frontend",
@@ -72,6 +76,7 @@ export const projects: Project[] = [
     title: "GameCenter",
     url: "gamecenter.vercel.app",
     desc: "E-commerce de videojuegos — catálogo, carrito, checkout y panel de administración.",
+    descKey: "projects.gamecenter",
     stack: ["Next.js", "TypeScript", "MongoDB", "Redux"],
     year: "2024",
     role: "Full-Stack",
